@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/header-footer.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crea tu CV online</title>
+</head>
+
+<body class="body">
+
+	<header id="header" class="header">
+		<div class="logo-cabecera">
+			<a href="index.html"><img src="images/logo.png" alt="logo-equipo"/></a>
+		</div>
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="http://www.twitter.com/share?url=https://adalab.github.io/clarke-s2-nan" target="_blank"/><img class="compartir" src="images/compartir2.png" alt="compartir"></a>
+				</li>
+
+				<li>
+					<img class="preview" src="images/preview1.svg" alt="vista previa">
+				</li>
+				<li>
+					<img class="print" src="images/print.svg" alt="icono imprimir">
+				</li>
+				<li>
+					<a class="link-aboutus" href="about-us.html">
+						<img class="aboutus" src="images/aboutus.svg" alt="about us">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="principal-content" class="principal-content">
+		<h1 class="principal-title">Crea tu propio CV</h1>
+		<section class="personalizatucv">
+			<ul class="personalizar">
+				<li class="perscolor">
+					<div>
+						<img src="images/paleta.png" alt="paleta">
+					</div>
+					<div><p>Paso 1: Elige el color</p>
+					</div>
+				</li>
+				<li class="persfuente">
+					<div>
+						<img src="images/fuente.png" alt="fuente">
+					</div>
+					<div>
+						<p>Paso 2: Elige la fuente</p>
+					</div>
+				</li>
+				<li class="persestilo">
+					<div>
+						<img src="images/escribe.svg" class="lapiz" alt="lapiz">
+					</div>
+					<div><p>Paso 3: Rellena tus datos</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section class="forms">
+			<form id="personsaldetails-content" method="post" class="total-form" enctype="multipart/form-data">
+				<!--Selección de Colores  -->
+				<fieldset class="section">
+					<legend class="openMenu">Elige estilos
+						<span class="btnSection btnStyles"></span>
+					</legend>
+					<div id="select-styles" class="boxfield hidden">
+						<div class="select-color">
+							<h2>Selecciona tus colores</h2>
+							<ul class="colors">
+								<li>
+									<input class="color_option color-1" type="button" data-theme-class="theme1">
+								</li>
+								<li>
+									<input class="color_option color-2" type="button" data-theme-class="theme2">
+								</li>
+								<li>
+									<input class="color_option color-3" type="button" data-theme-class="theme3">
+								</li>
+							</ul>
+						</div>
+						<div class="select-font">
+							<h2>Selecciona tu fuente</h2>
+							<ul class="fonts">
+								<li>
+									<input class="font_option font-1" type="button" data-font-class="font1">
+								</li>
+								<li>
+									<input class="font_option font-2" type="button" data-font-class="font2">
+								</li>
+								<li>
+									<input class="font_option font-3" type="button" data-font-class="font3">
+								</li>
+							</ul>
+						</div>
+						<div class="input-form-buttoms">
+						</div>
+					</div>
+				</fieldset>
+				<!-- Datos personales -->
+				<fieldset class="section">
+					<legend class="openMenu">Datos personales
+						<span class="btnSection btnPersonalData"></span>
+					</legend>
+					<div id="personal-data" class="boxfield hidden">
+						<div class="input-form photo">
+							<label for="photo">Introduce tu foto</label>
+							<input id="files" type="file" name="files[]"  accept="image/*" class="picture">
+						</div>
+						<div class="input-form">
+							<label for="name">Nombre*</label>
+							<input id="name" type="text" name="name" required class="personal-fields" maxlength="55">
+						</div>
+						<div class="input-form">
+							<label for="surnames">Apellidos*</label>
+							<input id="surnames" type="text" name="surnames" required class="personal-fields" maxlength="55">
+						</div>
+						<div class="input-form">
+							<label for="email">Email*</label>
+							<input id="email" type="email" name="email" required class="personal-fields" maxlength="55">
+						</div>
+						<div class="input-form">
+							<label for="phone">Teléfono</label>
+							<input id="phone" type="tel" name="phone" class="personal-fields" maxlength="55">
+						</div>
+						<div class="input-form">
+							<label for="address">Dirección</label>
+							<input id="address" type="text" name="address" class="personal-fields" maxlength="55">
+						</div>
+						<div class="input-form">
+							<label for="profession">Profesión*</label>
+							<input id="profession" type="text" name="profession" required class="personal-fields" maxlength="55">
+						</div>
+						<div class="input-form networks">
+							<p class="socialNetworks">Redes sociales</p>
+							<div class="twitterNetwork">
+								<span class="twitterLogo"></span>
+								<label for="twitter">Twitter</label>
+								<input id="twitter" type="text" name="twitter" class="personal-fields" maxlength="55">
+							</div>
+							<div class="linkedinNetwork">
+								<span class="linkedinLogo"></span>
+								<label for="linkedin">LinkedIn</label>
+								<input class="linkedin personal-fields" id="linkedin" type="url" name="linkedin">
+							</div>
+						</div>
+						<div class="input-form">
+							<label for="summary">Extracto</label>
+							<textarea id="summary" name="comments" rows="6" cols="40" class="personal-fields"></textarea>
+						</div>
+						<div class="input-form-buttoms">
+							<input type="reset" name="delete" value="Borrar">
+							<input type="button" name="save" value="Guardar" class="save-personal">
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- experiencia laboral -->
+				<fieldset id="jobfiel" class="section">
+					<legend class="openMenu">Experiencia Laboral
+						<span class="btnSection btnJob"></span>
+					</legend>
+
+					<div id="job-data" class="boxfield hidden">
+						<div class="input-form">
+							<label for="job">Puesto de trabajo</label>
+							<input id="job" type="text" name="job" class="job-fields">
+						</div>
+						<div class="input-form">
+							<label for="job-charge">Cargo:</label>
+							<input id="job-charge" type="text" name="job-charge" class="job-fields">
+						</div>
+						<div class="input-form">
+							<label for="job-bussines">Empresa:</label>
+							<input id="job-bussines" type="text" name="job-bussines" class="job-fields">
+						</div>
+						<div class="input-form date">
+							<div class="input-form initialmonth">
+								<label for="job-month-start">Mes de inicio</label>
+								<select id="job-month-start" name="job-month-start" class="month job-fields"></select>
+							</div>
+							<div class="input-form initialyear">
+								<label for="job-year-start">Año de inicio</label>
+								<select id="job-year-start" name="job-year-start" class="years job-fields"></select>
+							</div>
+						</div>
+						<div class="input-form date">
+							<div class="input-form finalmonth">
+								<label for="job-month-end">Mes de final</label>
+								<select id="job-month-end" name="job-month-end" class="month job-fields"></select>
+							</div>
+							<div class="input-form finalyear">
+								<label for="job-year-end">Año de final</label>
+								<select id="job-year-end" name="job-year-end" class="years job-fields"></select>
+							</div>
+						</div>
+						<div class="input-form">
+							<label for="job-extract">Descripción del cargo</label>
+							<textarea id="job-extract" name="job-extract" rows="6" cols="40" class="job-fields"></textarea>
+						</div>
+						<div class="input-form-buttoms">
+							<input type="reset" name="delete" value="Borrar" >
+							<input type="button" name="add" class="add-job"value="Añadir">
+							<!-- <input type="button" name="save" value="Guardar" class="save-job"> -->
+						</div>
+					</div>
+				</fieldset>
+				<!-- experiencia educativa -->
+				<fieldset id="edufiel" class="section">
+					<legend class="openMenu">Educación
+						<span class="btnSection btnEducation"></span>
+					</legend>
+					<div id="education-data" class="boxfield hidden">
+						<div class="input-form">
+							<label for="education-studies">Titulación</label>
+							<input type="text" id="education-studies" name="education-studies" required class="edu-fields">
+						</div>
+						<div class="input-form">
+							<label for="education-type-studies">Tipo de estudios</label>
+							<select id="education-type-studies" name="education-type-studies" class="type-studies edu-fields">
+
+							</select>
+						</div>
+						<div class="input-form">
+							<label for="education-institution">Centro de estudios</label>
+							<input class="edu-fields" type="text" id="education-institution" name="education-institution" required>
+						</div>
+						<div class="input-form date">
+							<div class="input-form initialyear">
+								<label for="education-year-start">Año de inicio</label>
+								<select id="education-year-start" name="education-year-start" class="years edu-fields-start">
+								</select>
+							</div>
+							<div class="input-form finalyear">
+								<label for="education-year-end">Año de finalización</label>
+								<select id="education-year-end" name="education-year-end" class="years edu-fields-end"></select>
+							</div>
+						</div>
+						<div class="input-form">
+							<label for="education-extract">Descripción</label>
+							<textarea id="education-extract" name="education-extract" rows="6" cols="40" class="edu-fields"></textarea>
+						</div>
+						<div class="input-form-buttoms">
+							<input type="reset" name="delete" value="Borrar">
+							<input type="button" name="add" value="Añadir" class="add-edu">
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- habilidades -->
+
+				<fieldset id="skillsfiel" class="section">
+					<legend class="openMenu">Habilidades <span class="btnSection btnSkills"></span>
+					</legend>
+					<div id="skills-data" class="boxfield hidden">
+
+						<div class="input-form skills">
+							<label for="skillstext">Habilidad</label>
+							<input id="skillstext" type="text" name="skillstext" class="skillstext">
+							<label for="percentage">Porcentaje</label>
+							<input id="percentage" type="number" name="porcentaje" min="1" max="100">
+						</div>
+						<div class="input-form-buttoms">
+							<input type="reset" name="delete" value="Borrar">
+							<input id="plus" type="button" name="add" value="Añadir">
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- otros datos-->
+				<fieldset id="otherdetfiel" class="section">
+					<legend class="openMenu">Otros datos de interés
+						<span class="btnSection btnOtherDetails"></span>
+					</legend>
+					<div id="other-data" class="boxfield hidden">
+						<div class="input-form">
+							<label for="details">Datos de interés</label>
+							<input id="details" type="text" name="details" class="other-fields">
+						</div>
+
+						<div class="input-form-buttoms">
+
+							<input type="reset" name="delete" value="Borrar" class="delete">
+							<input type="button" name="add" value="Añadir" class="add-detail">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+
+		<section id="printcv" class="cv type-font">
+			<section class="prev-info-personaldates prev-contact color-lateral">
+				<h1 class="prev-titles">Datos de contacto</h1>
+				<div class="prev-photo prev-personalcontent">
+					<img src="images/background1.jpeg" alt="Foto Personal" width="120" height="120" id="foto">
+				</div>
+				<ul class="prev-list-personal">
+					<li id="nombre" class="prev-contactdetails ">Nombre</li>
+					<li id="apellidos" class="prev-contactdetails">Apellidos</li>
+					<li id="profesion" class="prev-contactdetails">Profesión</li>
+					<li id="direccion" class="prev-contactdetails"></li>
+					<li id="mail" class="prev-contactdetails cut-url">ejemplo@gmail.com</li>
+					<li id="telefono" class="prev-contactdetails">666998811</li>
+					<li class="prev-contactdetails cut-url">Twitter</li>
+					<li class="prev-contactdetails cut-url">Linkedin</li>
+				</ul>
+			</section>
+			<section class="prev-description">
+				<h2 class="prev-titles">Extracto</h2><hr>
+				<p id="resumen" class="prev-contactdetails">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+			</section>
+			<div class="prev-content">
+				<section class="prev-info-experience">
+					<section class="prev-education">
+						<h2 class="prev-titles">Formación académica</h2><hr>
+						<ul class="prev-educationdetails">
+
+						</ul>
+					</section>
+
+					<section class="prev-professionalexperience">
+						<h2 class="prev-titles">Formación profesional</h2><hr>
+						<ul class="prev-jobdetails">
+
+						</ul>
+					</section>
+				</section>
+				<section class="prev-info-extra color-base">
+					<section class="prev-skills">
+						<h2 class="prev-titles">Habilidades</h2><hr>
+						<ul class="box-skills">
+							<li class="skill1">
+								<p class="skill-name"></p>
+								<div class="progress-bar hidden">
+									<div class="progress-bar__item"></div>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+					<section class="prev-interestdetails">
+						<h2 class="prev-titles">Otros datos de interés</h2><hr><p class="prev-other"></p>
+					</section>
+				</section>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+
+		<p class="copy">Copyright &copy;NaN!</p>
+		<div class="up-button"><a href="#principal-content">up-button</a>
+
+
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/skills.js"></script>
+	<script type="text/javascript" src="js/colors.js"></script>
+	<script type="text/javascript" src="js/fill-fields.js"></script>
+	<script type="text/javascript" src="js/vista.js"></script>
+
+</body>
+
+</html>
