@@ -5,7 +5,11 @@
 	},
 	"js": {
 		"src": [
-			"js/main.js"
+			"js/main.js",
+			"js/colors.js",
+			"js/fill-fields.js",
+			"js/skills.js",
+			"js/vista.js"			
 		],
 		"dest": "js/"
 	},
