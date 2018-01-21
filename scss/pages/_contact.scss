@@ -14,29 +14,17 @@
 	font-weight:bold;
 }
 
-.menu {
-	display: none;
-}
-.header {
-	height: auto;
-}
-.logo-cabecera{
-	min-width: 100px;
-}
-
 /*TEXTO*/
 .title-contact {
-	font-family: 'Indie Flower';
-	font-weight: bold;
+@include fontTitleBold();
 	font-size: 1.5em;
 	text-decoration: underline;
 	text-transform: uppercase;
 	text-align: center;
-	padding: 20px 0px;
+	padding: 80px 0px;
 }
 .subtitle-contact {
-	font-family: 'Indie Flower';
-	font-weight: bold;
+@include fontTitleBold();
 	font-size: 1.3em;
 	text-decoration: underline;
 	text-transform: uppercase;
@@ -45,35 +33,4 @@
 }
 .paragraph {
 	padding: 10px 0px;
-}
-
-/*FORMULARIO*/
-.contact-form {
-	display: flex;
-	flex-direction: column;
-	margin: 10px auto;
-	width: 90%;
-	@media all and (min-width: 700px){
-		margin: 10px auto;
-		width: 50%;
-	}
-	@media all and (min-width: 900px) {
-			margin: 10px auto;
-			width: 40%;
-		}
-	}
-.label {
-	padding: 5px 0px;
-}
-.cell {
-	border-radius: 5px;
-	padding: 10px;
-	border-style: inset;
-}
-.button {
-	margin: 10px auto;
-	height: 30px;
-	width: 30%;
-	border-radius: 5px;
-	font-weight: bold;
 }
