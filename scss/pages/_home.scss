@@ -3,6 +3,10 @@ body {
 	background-color: $colorWhite;
 	display: flex;
 	flex-direction: column;
+	@media all and (min-width: 900px) {
+			display: flex;
+			flex-wrap: wrap;
+	}
 }
 
 .principal-content {
@@ -10,7 +14,12 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
+	@media all and (min-width: 900px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }
+
 .personalizar {
 	display: flex;
 	flex-direction: row;
@@ -18,8 +27,11 @@ body {
 	border-radius: 15px;
 	justify-content: center;
 	align-items: center;
-
+	@media all and (min-width: 700px) {
+		max-width: 470px;
+	}
 }
+
 .personalizar li {
 	display: flex;
 	flex-direction: column;
@@ -29,7 +41,7 @@ body {
 	font-weight: bold;
 }
 .personalizatucv {
-	width: 100%;
+	width: $totalSize;
 	position: relative;
 	display: flex;
 	padding: 15px;
@@ -42,7 +54,12 @@ body {
 	padding: 10px;
 	height: 90px;
 	width: 90px;
+	@media all and (min-width: 700px) {
+		height: 125px;
+		width: 125px;
+	}
 }
+
 /*Pagina principal*/
 .background {
 	height: 100vh;
@@ -72,7 +89,14 @@ li {
 }
 .principal-logo img {
 	width: 250px;
+	@media all and (min-width: 700px) {
+		width: 400px;
+		}
+	@media all and (min-width: 900px) {
+		width: 500px;
+	}
 }
+
 .principal-logo a {
 	text-decoration: none;
 }
@@ -92,7 +116,13 @@ li {
 	height: auto;
 	margin-bottom: 30px;
 	box-shadow: 4px 4px 1px #B4B6B2;
+	@media all and (min-width: 900px) {
+		width: 55%;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
 }
+
 .prev-info-personaldates {
 	display: flex;
 	flex-direction: row;
@@ -105,13 +135,27 @@ li {
 .prev-photo {
 	width: 30%;
 	min-width: 120px;
+	@media all and (min-width: 700px) {
+		width: 20%;
+	}
+	@media all and (min-width: 900px) {
+		width: 24%;
+	}
 }
+
 .prev-photo img{
 	border-radius: 50%
 }
 .prev-list-personal{
 	width: 65%;
+	@media all and (min-width: 700px) {
+		width: 70%;
+	}
+	@media all and (min-width: 900px) {
+		width: 74%;
+	}
 }
+
 .cut-url{
 	overflow-wrap: break-word;
 	word-wrap: break-word;
