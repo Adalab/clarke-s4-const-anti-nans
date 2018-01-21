@@ -8,6 +8,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
 
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");/*CABECERA*/.header {
   position: fixed;
   top: 0;
@@ -164,6 +165,44 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
+=======
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+.principal-title {
+  width: 100%;
+  text-align: center;
+  font-family: 'Indie Flower';
+  color: #FFAB33;
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Indie Flower';
+  font-size: 4em;
+}/*PREVIO CV*/.prev-titles {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0px;
+  width: 100%;
+  text-align: left;
+}
+
+.camps-titles {
+  font-weight: bold;
+  display: inline;
+>>>>>>> first-style
 }
 
 body {
@@ -193,6 +232,7 @@ body {
   align-items: flex-start;
 }
 
+<<<<<<< HEAD
 .principal-title {
   width: 100%;
   text-align: center;
@@ -209,6 +249,8 @@ body {
   justify-content: center;
 }
 
+=======
+>>>>>>> first-style
 .personalizar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,11 +328,14 @@ body {
   align-items: center;
 }
 
+<<<<<<< HEAD
 .title {
   font-family: 'Indie Flower';
   font-size: 4em;
 }
 
+=======
+>>>>>>> first-style
 li {
   list-style: none;
 }
@@ -379,6 +424,7 @@ li {
 .prev-description,.prev-education,.prev-professionalexperience,.prev-skills,.prev-interestdetails {
   padding: 10px;
 }
+<<<<<<< HEAD
 
 .prev-titles {
   font-size: 15px;
@@ -918,5 +964,7 @@ fieldset {
     width: 74%;
   }
 }
+=======
+>>>>>>> first-style
 
 /*# sourceMappingURL=main.css.map */
