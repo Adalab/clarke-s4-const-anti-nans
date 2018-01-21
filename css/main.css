@@ -1,2 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text");
+
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.principal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
 
 /*# sourceMappingURL=main.css.map */

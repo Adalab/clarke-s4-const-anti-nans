@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+
+* {
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+}
+
+body {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.principal-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
