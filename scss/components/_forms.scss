@@ -1,0 +1,23 @@
+/*FORMULARIO*/
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	margin: 10px auto;
+	width: 90%;
+	@media all and (min-width: 700px){
+		margin: 10px auto;
+		width: 50%;
+	}
+	@media all and (min-width: 900px) {
+			margin: 10px auto;
+			width: 40%;
+		}
+	}
+.label {
+	padding: 5px 0px;
+}
+.cell {
+	border-radius: 5px;
+	padding: 10px;
+	border-style: inset;
+}
