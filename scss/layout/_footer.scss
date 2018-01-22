@@ -1,0 +1,15 @@
+
+/*FOOTER*/
+.footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 70px;
+	background-color: #272727;
+	@media all and (min-width: 900px){
+		width: 100%;
+	}
+}
+.copy {
+	color: white;
+}

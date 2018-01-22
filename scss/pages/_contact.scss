@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+.principal-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 95%;
+	min-height: 100vh;
+	margin: 100px auto;
+	line-height: 1.5;
+}
+.important {
+	font-weight:bold;
+}
+
+/*TEXTO*/
+.title-contact {
+@include fontTitleBold();
+	font-size: 1.5em;
+	text-decoration: underline;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 80px 0px;
+}
+.subtitle-contact {
+@include fontTitleBold();
+	font-size: 1.3em;
+	text-decoration: underline;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 20px 0px;
+}
+.paragraph {
+	padding: 10px 0px;
+}
