@@ -112,6 +112,72 @@
 
 .up-button a:hover {
   background-image: url(../images/up-button-solid.svg);
+}/*BOTONES FORMULARIO*/.btnSection {
+  position: absolute;
+  width: 75%;
+  top: 5px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background-position: center center;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+}
+
+.btnStyles {
+  background-image: url("../images/style.svg");
+}
+
+.btnPersonalData {
+  background-image: url("../images/user.svg");
+}
+
+.btnJob {
+  background-image: url("../images/suitcase.svg");
+}
+
+.btnEducation {
+  background-image: url("../images/education.svg");
+}
+
+.btnSkills {
+  background-image: url("../images/skills.svg");
+}
+
+.btnOtherDetails {
+  background-image: url("../images/id-card.svg");
+}
+
+.btnMinus {
+  background-image: url("../images/remove.svg");
+}
+
+.input-form-buttoms {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.input-form-buttoms input[type="button"],.input-form-buttoms input[type="reset"] {
+  width: 30%;
+  height: 35px;
+  background-color: #fcac0c;
+  color: #fff;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px #888888;
+  box-shadow: 1px 1px 1px #888888;
+}
+
+fieldset {
+  margin-top: 15px;
 }/*FORMULARIO*/.contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +198,80 @@
   border-radius: 5px;
   padding: 10px;
   border-style: inset;
+}/*FORMULARIO*/.forms {
+  width: 100%;
+}
+
+.total-form {
+  font-family: 'Rubik', sans-serif;
+  max-width: 480px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.input-form {
+  padding: 10px 15px;
+}
+
+.input-form.skills label {
+  margin: 10px 0;
+}
+
+.input-form input {
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  font-size: 14px;
+}
+
+.input-form input[type="file"] {
+  border: none;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+::-webkit-file-upload-button {
+  height: 40px;
+  background-color: #fcac0c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px #888888;
+  box-shadow: 1px 1px 1px #888888;
+  font-size: 12px;
+}
+
+.input-form textarea {
+  width: 100%;
+  border: 0;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: inset;
+  font-size: 14px;
+}
+
+.input-form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 * {
@@ -437,146 +577,6 @@ li {
 .camps-titles {
   font-weight: bold;
   display: inline;
-}/*FORMULARIO*/.forms {
-  width: 100%;
-}
-
-.total-form {
-  font-family: 'Rubik', sans-serif;
-  max-width: 480px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 15px;
-  margin: auto;
-  padding-bottom: 50px;
-}
-
-.input-form {
-  padding: 10px 15px;
-}
-
-.input-form.skills label {
-  margin: 10px 0;
-}
-
-.input-form input {
-  width: 100%;
-  padding: 5px;
-  height: 30px;
-  border-radius: 5px;
-  border-width: 2px;
-  border-style: inset;
-  font-size: 14px;
-}
-
-.input-form input[type="file"] {
-  border: none;
-  width: auto;
-  height: auto;
-  padding: 0;
-}
-
-::-webkit-file-upload-button {
-  height: 40px;
-  background-color: #fcac0c;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  -webkit-box-shadow: 1px 1px 1px #888888;
-  box-shadow: 1px 1px 1px #888888;
-  font-size: 12px;
-}
-
-.input-form textarea {
-  width: 100%;
-  border: 0;
-  padding: 2px 5px;
-  border-radius: 5px;
-  border-width: 2px;
-  border-style: inset;
-  font-size: 14px;
-}
-
-.input-form label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 10px;
-}/*BOTONES FORMULARIO*/.btnSection {
-  position: absolute;
-  width: 75%;
-  top: 5px;
-  right: 15px;
-  width: 35px;
-  height: 35px;
-  background-position: center center;
-  background-size: cover;
-  background-color: transparent;
-  border: none;
-}
-
-.btnStyles {
-  background-image: url("../images/style.svg");
-}
-
-.btnPersonalData {
-  background-image: url("../images/user.svg");
-}
-
-.btnJob {
-  background-image: url("../images/suitcase.svg");
-}
-
-.btnEducation {
-  background-image: url("../images/education.svg");
-}
-
-.btnSkills {
-  background-image: url("../images/skills.svg");
-}
-
-.btnOtherDetails {
-  background-image: url("../images/id-card.svg");
-}
-
-.btnMinus {
-  background-image: url("../images/remove.svg");
-}
-
-.input-form-buttoms {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 15px;
-}
-
-.input-form-buttoms input[type="button"],.input-form-buttoms input[type="reset"] {
-  width: 30%;
-  height: 35px;
-  background-color: #fcac0c;
-  color: #fff;
-  border: none;
-  margin: 0 8px;
-  cursor: pointer;
-  -webkit-box-shadow: 1px 1px 1px #888888;
-  box-shadow: 1px 1px 1px #888888;
-}
-
-fieldset {
-  margin-top: 15px;
 }/*SELECCION DE COLORES*/.select-color,.select-font {
   padding: 15px;
 }
