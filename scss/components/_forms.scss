@@ -83,3 +83,59 @@
 	display: flex;
 	margin-bottom: 10px;
 }
+
+/*FORM COLORS*/
+.select-color{
+	padding: 15px;
+	.colors {
+		@include displayColorFonts();
+		input {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.color-1,
+	.theme1 {
+		background-color: $colorLightBlue;
+	}
+	.color-2,
+	.theme2 {
+		background-color: $colorLightOrange;
+	}
+	.color-3,
+	.theme3 {
+		background-color: $colorLightYellow;
+	}
+}
+
+/*FORM TEXT*/
+.select-font{
+	padding: 15px;
+	.fonts {
+		@include displayColorFonts();
+		input {
+			width: 50px;
+			height: 40px;
+			background-size: cover;
+		}
+	}
+	.font-1 {
+		background-image: url(../images/Playfair-Display.png);
+	}
+	.font-2 {
+		background-image: url(../images/Crimson.png);
+	}
+	.font-3 {
+		background-image: url(../images/Josefin.png);
+	}
+}
+
+.font1 {
+	font-family: 'Playfair Display', serif;
+}
+.font2 {
+	font-family: 'Crimson Text', serif;
+}
+.font3 {
+	font-family: 'Josefin Slab', serif;
+}

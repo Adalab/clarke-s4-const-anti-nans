@@ -161,88 +161,21 @@ li {
 }
 
 /*SELECCION DE COLORES*/
-.select-color,
-.select-font {
-	padding: 15px;
-}
+/*-------Icía desde aquí------*/
 
-.colors {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	padding: 10px;
-}
-.color-1,
-.color-2,
-.color-3 {
-	width: 40px;
-	height: 40px;
-}
-.color-1 {
-	background-color: #9cb7e3;
-}
-.color-2 {
-	background-color: #ca7544;
-}
-.color-3 {
-	background-color: #c4d468;
-}
-.theme1{
-	background-color: #9cb7e3;
-}
-.theme2{
-	background-color: #ca7544;
-}
-.theme3{
-	background-color: #c4d468;
-}
-/*SELECCION DE FUENTES*/
-.fonts {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	padding: 10px;
-}
-.font-1,
-.font-2,
-.font-3 {
-	width: 50px;
-	height: 40px;
-}
-.font-1 {
-	background-image: url(../images/Playfair-Display.png);
-	background-size: cover;
-}
-.font-2 {
-	background-image: url(../images/Crimson.png);
-	background-size: cover;
-}
-.font-3 {
-	background-image: url(../images/Josefin.png);
-	background-size: cover;
-}
-.font1 {
-	font-family: 'Playfair Display', serif;
-}
-.font2 {
-	font-family: 'Crimson Text', serif;
-}
-.font3 {
-	font-family: 'Josefin Slab', serif;
-}
 /*DATOS PERSONALES*/
 
 .section {
-	background-color: #FFFFE3;
+	background-color: $colorWhiteYellow;
 	padding: 46px 0 0;
 	position: relative;
 	border-radius: 15px;
-	box-shadow: 4px 4px 1px #B4B6B2;
+	box-shadow: 4px 4px 1px $colorGrey;
 }
 .section legend {
-	background-color: #006D9D;
+	background-color: $colorBlue;
 	padding: 15px;
-	color: #fff;
+	color: $colorWhite;
 	position: absolute;
 	top: 0;
 	left: 0;
