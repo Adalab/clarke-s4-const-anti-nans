@@ -20,3 +20,60 @@
 .up-button a:hover {
 	background-image: url(../images/up-button-solid.svg);
 }
+/*BOTONES FORMULARIO*/
+.btnSection {
+	position:absolute;
+	width: 75%;
+	top: 5px;
+	right: 15px;
+	width: 35px;
+	height: 35px;
+	background-position: center center;
+	background-size: cover;
+	background-color: transparent;
+	border: none;
+}
+
+.btnStyles {
+	background-image: url('../images/style.svg');
+}
+.btnPersonalData {
+	background-image: url('../images/user.svg');
+}
+.btnJob {
+	background-image: url('../images/suitcase.svg');
+}
+.btnEducation {
+	background-image: url('../images/education.svg');
+}
+.btnSkills {
+	background-image: url('../images/skills.svg');
+}
+.btnOtherDetails {
+	background-image: url('../images/id-card.svg');
+}
+
+.btnMinus {
+	background-image: url('../images/remove.svg');
+}
+
+.input-form-buttoms {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+}
+.input-form-buttoms input[type="button"],
+.input-form-buttoms input[type="reset"]{
+	width: 30%;
+	height: 35px;
+	background-color: #fcac0c;
+	color: #fff;
+	border: none;
+	margin: 0 8px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #888888;
+}
+fieldset {
+	margin-top: 15px;
+}
