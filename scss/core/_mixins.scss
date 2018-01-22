@@ -9,3 +9,15 @@
 	justify-content: space-around;
 	padding: 10px;
 }
+
+@mixin networks {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 22px;
+}
+
+@mixin flexColum {
+	display: flex;
+	flex-direction: column;
+}

@@ -349,6 +349,146 @@ fieldset {
 
 .font3 {
   font-family: 'Josefin Slab', serif;
+}/*PERSONAL DATA*/.section {
+  background-color: #FFFFE3;
+  padding: 46px 0 0;
+  position: relative;
+  border-radius: 15px;
+  -webkit-box-shadow: 4px 4px 1px #B4B6B2;
+  box-shadow: 4px 4px 1px #B4B6B2;
+}
+
+.section legend {
+  background-color: #006D9D;
+  padding: 15px;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}/*NETWORKS*/.socialNetworks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.networks label {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.twitterNetwork,.linkedinNetwork {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.twitterLogo {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 22px;
+  background-image: url("../images/twitter.svg");
+}
+
+.linkedinLogo {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 22px;
+  background-image: url("../images/linkedin.svg");
+}/*SKILLS*/.progress-bar {
+  width: 100px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 15px;
+  margin: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress-bar__item {
+  border-radius: inherit;
+  height: inherit;
+  background: #f1e767;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #f1e767), color-stop(100%, #feb645));
+  background: -webkit-gradient(linear, left top, right top, from(#f1e767), to(#feb645));
+  background: linear-gradient(to right, #f1e767 0%, #feb645 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
+  width: 0%;
+  -webkit-transition: width ease 1s;
+  transition: width ease 1s;
+}
+
+.box-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.skill1 {
+  text-align: center;
+}
+
+#set-progress {
+  margin-top: 10px;
+  line-height: 20px;
+}/*EDUCATION*/.date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.initialmonth,.finalmonth,.initialyear,.finalyear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+  padding: 0;
+}
+
+.month,.years,.type-studies {
+  width: 60%;
+  font-size: 16px;
 }
 
 * {
@@ -654,158 +794,6 @@ li {
 .camps-titles {
   font-weight: bold;
   display: inline;
-}/*SELECCION DE COLORES*//*-------Icía desde aquí------*//*DATOS PERSONALES*/.section {
-  background-color: #FFFFE3;
-  padding: 46px 0 0;
-  position: relative;
-  border-radius: 15px;
-  -webkit-box-shadow: 4px 4px 1px #B4B6B2;
-  box-shadow: 4px 4px 1px #B4B6B2;
-}
-
-.section legend {
-  background-color: #006D9D;
-  padding: 15px;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 15px;
-  cursor: pointer;
-}/*NETWORKS*/.networks label {
-  display: none;
-  margin-bottom: 10px;
-}
-
-.socialNetworks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.networks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.twitterNetwork,.linkedinNetwork {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 85%;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  margin-bottom: 20px;
-}
-
-.twitterLogo {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 22px;
-  background-image: url("../images/twitter.svg");
-}
-
-.linkedinLogo {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 22px;
-  background-image: url("../images/linkedin.svg");
-}/*HABILIDADES*/.progress-bar {
-  width: 100px;
-  height: 10px;
-  background: #fff;
-  border-radius: 15px;
-  margin: 20px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-}
-
-.hidden {
-  display: none;
-}
-
-.progress-bar__item {
-  border-radius: inherit;
-  height: inherit;
-  background: #f1e767;
-  background: -webkit-gradient(left top, right top, color-stop(0%, #f1e767), color-stop(100%, #feb645));
-  background: -webkit-gradient(linear, left top, right top, from(#f1e767), to(#feb645));
-  background: linear-gradient(to right, #f1e767 0%, #feb645 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
-  width: 0%;
-  -webkit-transition: width ease 1s;
-  transition: width ease 1s;
-}
-
-.box-skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.skill1 {
-  text-align: center;
-}
-
-#set-progress {
-  margin-top: 10px;
-  line-height: 20px;
-}/*EXPERIENCIA LABORAL*//*EDUCACIÓN*/.date {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.initialmonth,.finalmonth {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 50%;
-  padding: 0;
-}
-
-.month,.years,.type-studies {
-  width: 60%;
-  font-size: 16px;
-}
-
-.initialyear,.finalyear {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 50%;
-  padding: 0;
 }/*MEDIAQUERIES*/.principal-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -853,7 +841,7 @@ li {
 }
 
 body {
-  background-color: white;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,7 +949,7 @@ li {
 }
 
 .text {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -971,7 +959,7 @@ li {
 }
 
 .principal-logo {
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid #ffffff;
   margin-bottom: 50px;
 }
 
@@ -1129,6 +1117,10 @@ li {
     width: 40%;
   }
 
+  .forms {
+    width: 45%;
+  }
+
   .title {
     font-size: 7em;
   }
@@ -1160,10 +1152,6 @@ li {
 
   .text-principal {
     width: 100%;
-  }
-
-  .forms {
-    width: 45%;
   }
 
   .cv {
