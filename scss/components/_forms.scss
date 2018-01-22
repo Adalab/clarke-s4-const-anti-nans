@@ -65,11 +65,11 @@
 }
 ::-webkit-file-upload-button{
 	height: 40px;
-	background-color: #fcac0c;
-	color: #fff;
+	background-color: $colorOrangeLigth;
+	color: $colorYellow;
 	border: none;
 	cursor: pointer;
-	box-shadow: 1px 1px 1px #888888;
+	box-shadow: 1px 1px 1px $colorGrey;
 	font-size: 12px;
 }
 
