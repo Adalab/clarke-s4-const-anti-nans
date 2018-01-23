@@ -9,8 +9,32 @@ const btnSavePerson = document.querySelector('.save-personal');
 
 // RELLENAR Y AÑADIR DATOS PERSONALES
 const saveNewPersonal = () => {
-	const addPerson = '<li id="nombre" class="prev-contactdetails ">' + document.getElementById('name').value + '</li><li id="apellidos" class="prev-contactdetails">' + document.getElementById('surnames').value + '</li><li id="profesion" class="prev-contactdetails">' + document.getElementById('profession').value + '</li><li id="direccion" class="prev-contactdetails">' + document.getElementById('address').value + '</li><li id="mail" class="prev-contactdetails cut-url">' + document.getElementById('email').value +
-	'</li><li id="telefono" class="prev-contactdetails cut-url">' + document.getElementById('phone').value + '</li><li class="prev-contactdetails cut-url">' + document.getElementById('twitter').value + '</li><li class="prev-contactdetails cut-url">' + document.getElementById('linkedin').value + '</li>'
+	const addPerson = `
+		<li id="nombre" class="prev-contactdetails">
+			${document.getElementById('name').value}
+		</li>
+		<li id="apellidos" class="prev-contactdetails">
+			${document.getElementById('surnames').value}
+		</li>
+		<li id="profesion" class="prev-contactdetails">
+			${document.getElementById('profession').value}
+		</li>
+		<li id="direccion" class="prev-contactdetails">
+			${document.getElementById('address').value}
+		</li>
+		<li id="mail" class="prev-contactdetails cut-url">
+			${document.getElementById('email').value}
+		</li>
+		<li id="telefono" class="prev-contactdetails cut-url">
+			${document.getElementById('phone').value}
+		</li>
+		<li class="prev-contactdetails cut-url">
+			${document.getElementById('twitter').value}
+		</li>
+		<li class="prev-contactdetails cut-url">
+			${document.getElementById('linkedin').value}
+		</li>
+	`;
 
 	const newPerson = document.querySelector('.prev-list-personal');
 	newPerson.innerHTML = addPerson;
@@ -26,7 +50,7 @@ const saveNewPersonal = () => {
 
 // RELLENAR Y AÑADIR EXTRACTO
 const saveExtract = () => {
-	var addExtract ='<p id="resumen" class="prev-contactdetails">' + document.getElementById('summary').value + '</p>';
+	const addExtract ='<p id="resumen" class="prev-contactdetails">' + document.getElementById('summary').value + '</p>';
 
 	const newExtract = document.getElementById('resumen');
 	newExtract.innerHTML = addExtract;
