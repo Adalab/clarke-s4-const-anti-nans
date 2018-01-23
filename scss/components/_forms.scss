@@ -24,6 +24,9 @@
 /*FORMULARIO*/
 .forms {
 	width: 100%;
+	@media all and (min-width: 900px){
+		width: 45%;
+	}
 }
 .total-form {
 	font-family: 'Rubik', sans-serif;
@@ -82,4 +85,174 @@
 .input-form label {
 	display: flex;
 	margin-bottom: 10px;
+}
+
+/*FORM COLORS*/
+.select-color{
+	padding: 15px;
+	.colors {
+		@include displayColorFonts();
+		input {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.color-1,
+	.theme1 {
+		background-color: $colorLightBlue;
+	}
+	.color-2,
+	.theme2 {
+		background-color: $colorLightOrange;
+	}
+	.color-3,
+	.theme3 {
+		background-color: $colorLightYellow;
+	}
+}
+
+/*FORM TEXT*/
+.select-font{
+	padding: 15px;
+	.fonts {
+		@include displayColorFonts();
+		input {
+			width: 50px;
+			height: 40px;
+			background-size: cover;
+		}
+	}
+	.font-1 {
+		background-image: url(../images/Playfair-Display.png);
+	}
+	.font-2 {
+		background-image: url(../images/Crimson.png);
+	}
+	.font-3 {
+		background-image: url(../images/Josefin.png);
+	}
+}
+
+.font1 {
+	font-family: 'Playfair Display', serif;
+}
+.font2 {
+	font-family: 'Crimson Text', serif;
+}
+.font3 {
+	font-family: 'Josefin Slab', serif;
+}
+
+/*PERSONAL DATA*/
+.section {
+	background-color: $colorWhiteYellow;
+	padding: 46px 0 0;
+	position: relative;
+	border-radius: 15px;
+	box-shadow: 4px 4px 1px $colorGrey;
+	legend {
+		background-color: $colorBlue;
+		padding: 15px;
+		color: $colorWhite;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-radius: 15px;
+		cursor: pointer;
+	}
+}
+
+/*NETWORKS*/
+.socialNetworks {
+	@include flexColum();
+	margin-bottom: 10px;
+}
+.networks {
+	@include flexColum();
+	label {
+		display: none;
+		margin-bottom: 10px;
+	}
+}
+.twitterNetwork,
+.linkedinNetwork {
+	display: flex;
+	width: 85%;
+	align-self:flex-end;
+	margin-bottom: 20px;
+
+}
+.twitterLogo {
+	@include networks();
+	background-image: url('../images/twitter.svg');
+}
+.linkedinLogo {
+	@include networks();
+	background-image: url('../images/linkedin.svg');
+}
+
+/*SKILLS*/
+.progress-bar {
+	width: 100px;
+	height: 10px;
+	background: $colorWhite;
+	border-radius: 15px;
+	margin: 20px;
+	overflow: hidden;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.hidden {
+	display: none;
+}
+
+.progress-bar__item {
+	border-radius: inherit;
+	height: inherit;
+	background: rgba(241,231,103,1);
+	background: -moz-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,1)));
+	background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+	background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+	background: -ms-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+	background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
+	width: 0%;
+	transition: width ease 1s;
+}
+
+.box-skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.skill1 {
+	text-align: center;
+}
+
+#set-progress {
+	margin-top: 10px;
+	line-height: 20px;
+}
+
+/*EDUCATION*/
+.date {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+}
+.initialmonth,
+.finalmonth,
+.initialyear,
+.finalyear {
+	@include flexColum();
+	width: 50%;
+	padding: 0;
+}
+.month,
+.years,
+.type-studies {
+	width: 60%;
+	font-size: 16px;
 }
