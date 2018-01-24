@@ -287,7 +287,7 @@ class App extends Component {
             <section className="prev-info-personaldates prev-contact color-lateral">
               <h1 className="prev-titles">Datos de contacto</h1>
               <div className="prev-photo prev-personalcontent">
-                <img src="images/background1.jpeg" alt="Foto Personal" width="120" height="120" id="foto"/>
+                <img src="src/images/background1.jpeg" alt="Foto Personal" width="120" height="120" id="foto"/>
               </div>
               <ul className="prev-list-personal">
                 <li id="nombre" className="prev-contactdetails ">Nombre</li>
