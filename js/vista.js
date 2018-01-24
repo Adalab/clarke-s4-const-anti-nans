@@ -1,22 +1,15 @@
 'use strict'
 
-function vistaprevia(){
-	fetch('styles/style.css')
-	.then(function (response){
-    return response.json();
-  })
-  .then(function(json){
-    var responseJSON = json;
-
-	// var request = new XMLHttpRequest(); //hacemos la petición con AJAX
-	// request.open('GET', 'styles/style.css'); // abrimos la pentición (es de tipo GET y le podemos asignar tanto una URL absoluta como relativa)
-	// request.addEventListener('load', abrirVistaPrevia); //(evento para que llame a abrirVistaPrevia cuando la petición cargue)
+function vistaprevia() {
+	var request = new XMLHttpRequest(); //hacemos la petición con AJAX
+	request.open('GET', 'styles/style.css'); // abrimos la pentición (es de tipo GET y le podemos asignar tanto una URL absoluta como relativa)
+	request.addEventListener('load', abrirVistaPrevia); //(evento para que llame a abrirVistaPrevia cuando la petición cargue)
 
 	function abrirVistaPrevia() {
-		let estilo = request.responseText; //variable que creamos dnd se genera el callback de la petición).
-		let prtContent = document.getElementById("printcv").innerHTML; //variable dnd seleccionamos la sección de HTML a la que queremos aplicar nuestra función.
+		var estilo = request.responseText; //variable que creamos dnd se genera el callback de la petición).
+		var prtContent = document.getElementById("printcv").innerHTML; //variable dnd seleccionamos la sección de HTML a la que queremos aplicar nuestra función.
 
-		let WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0'); //generamos una ventana emergente y le damos dimensiones...
+		var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0'); //generamos una ventana emergente y le damos dimensiones...
 		if (WinPrint != null) {
 			WinPrint.document.write('<html>');
 			WinPrint.document.write('<head><style type="text/css">' + estilo + '</style></head>');
@@ -34,9 +27,9 @@ function vistaprevia(){
 }
 
 
-function imprimir() {
-	var prtContent = document.getElementById("printcv");
-	var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+const imprimir = () => {
+	let prtContent = document.getElementById("printcv");
+	let WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
 	WinPrint.document.write(prtContent.innerHTML);
 	WinPrint.document.close();
 	WinPrint.focus();
@@ -45,8 +38,7 @@ function imprimir() {
 
 }
 
-var btnPreview = document.querySelector('.preview');
+const btnPreview = document.querySelector('.preview');
 btnPreview.addEventListener('click', vistaprevia);
-
-var btnPrint = document.querySelector('.print');
+const btnPrint = document.querySelector('.print');
 btnPrint.addEventListener('click', imprimir);
