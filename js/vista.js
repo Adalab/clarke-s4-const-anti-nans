@@ -27,9 +27,9 @@ function vistaprevia() {
 }
 
 
-function imprimir() {
-	var prtContent = document.getElementById("printcv");
-	var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+const imprimir = () => {
+	let prtContent = document.getElementById("printcv");
+	let WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
 	WinPrint.document.write(prtContent.innerHTML);
 	WinPrint.document.close();
 	WinPrint.focus();
@@ -38,7 +38,7 @@ function imprimir() {
 
 }
 
-var btnPreview = document.querySelector('.preview');
+const btnPreview = document.querySelector('.preview');
 btnPreview.addEventListener('click', vistaprevia);
-var btnPrint = document.querySelector('.print');
+const btnPrint = document.querySelector('.print');
 btnPrint.addEventListener('click', imprimir);
