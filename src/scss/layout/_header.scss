@@ -1,0 +1,51 @@
+/*CABECERA*/
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100%;
+	background-color: #006D9D;
+	font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+	color: $colorWhite;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 150px;
+@media all and (min-width: 900px) {
+		flex-direction: row;
+		height: 100px;
+		width: 100%;
+	}
+}
+.compartir,
+.preview,
+.print {
+		width: 50px;
+		padding: 10px;
+		cursor: pointer;
+
+}
+.aboutus {
+	width: 60px;
+	padding: 10px;
+}
+
+.link-aboutus {
+	position:relative;
+	display: block;
+	width: 60px;
+	cursor: pointer;
+}
+.logo-cabecera img {
+	width: 170px;
+}
+.menu {
+	display: flex;
+  justify-content: space-around;
+	align-items: center;
+	padding-right: 20px;
+	list-style-type: none;
+}

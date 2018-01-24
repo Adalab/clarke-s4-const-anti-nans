@@ -1,0 +1,41 @@
+
+* {
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+}
+.principal-title {
+	width: $totalSize;
+	text-align: center;
+	color: $colorOrange;
+	font-size: 3em;
+	margin-top: 170px;
+	display: flex;
+	justify-content: center;
+	@include fontTitleBold();
+	@media all and (min-width: 700px) {
+		font-size: 4em;
+	}
+}
+.title {
+	font-family: 'Indie Flower';
+	font-size: 4em;
+	@media all and (min-width: 700px) {
+		font-size: 6em;
+	}
+	@media all and (min-width: 900px) {
+		font-size: 7em;
+	}
+}
+
+/*PREVIO CV*/
+.prev-titles {
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 0px;
+	width: $totalSize;
+	text-align: left;
+}
+.camps-titles{
+	font-weight: bold;
+	display: inline;
+}
