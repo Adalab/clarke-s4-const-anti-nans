@@ -1,4 +1,4 @@
-'use strict';
+	'use strict';
 //MENU DESPLEGABLE
 const buttonLegend = document.querySelectorAll('.openMenu');//array de legends
 const sectionForm = document.querySelectorAll('.boxfield');//array de boxfields
@@ -7,43 +7,43 @@ const selectMonth = document.querySelectorAll('.month');
 
 //Desplegables OK
 const desplegarPlegar = (event) => {
-let boxfieldContent = event.currentTarget.nextElementSibling;
-boxfieldContent.classList.toggle('hidden');
-const iconLegend = event.currentTarget.querySelector('.btnSection');
-iconLegend.classList.toggle('btnMinus');
+	let boxfieldContent = event.currentTarget.nextElementSibling;
+	boxfieldContent.classList.toggle('hidden');
+	const iconLegend = event.currentTarget.querySelector('.btnSection');
+	iconLegend.classList.toggle('btnMinus');
 }
 
 for (const displayForm of buttonLegend) {
-displayForm.addEventListener('click', desplegarPlegar);
+	displayForm.addEventListener('click', desplegarPlegar);
 }
 
 //Select years OK
 const list = (firstyear, totalyears) => {
-let options = '';
-for (let i = (totalyears + firstyear); i >= 0; i--){
-	if (i === 2018){
-		options = options + '<option value="' + (i) + '" selected>'+(i)+'</option>';
-	}else{
-		options = options + '<option value="' + (i) + '">'+(i)+'</option>';
+	let options = '';
+	for (let i = (totalyears + firstyear); i >= 0; i--){
+		if (i === 2018){
+			options = options + '<option value="' + (i) + '" selected>'+(i)+'</option>';
+		}else{
+			options = options + '<option value="' + (i) + '">'+(i)+'</option>';
+		}
 	}
-}
-return options;
+	return options;
 }
 //Añadir años a los select OK
 for (const addYears of selectYear){
-addYears.innerHTML=list(1950,100);
+	addYears.innerHTML=list(1950,100);
 }
 
 //Añadir meses a los select OK
 const listMonth = (firstmonth, totalmonth) => {
-let options = '';
-for (let i = 1; i <= 12; i++){
-	options = options + '<option value="' + (i) + '" selected>'+(i)+'</option>';
-}
-return options;
+	let options = '';
+	for (let i = 1; i <= 12; i++){
+		options = options + '<option value="' + (i) + '" selected>'+(i)+'</option>';
+	}
+	return options;
 }
 for (const addYears of selectMonth){
-addYears.innerHTML=listMonth(0,12);
+	addYears.innerHTML=listMonth(0,12);
 
 }
 
@@ -67,22 +67,22 @@ let pb = document.querySelector('.progress-bar__item');
 
 //foto
 const archivo = (evt) => {
-let files = evt.target.files; // FileList object
-//Obtenemos la imagen del campo "file".
-for (let i = 0, f; f = files[i]; i++) {
-	//Solo admitimos imágenes.
-	if (!f.type.match('image.*')) {
-		continue;
+	let files = evt.target.files; // FileList object
+	//Obtenemos la imagen del campo "file".
+	for (let i = 0, f; f = files[i]; i++) {
+		//Solo admitimos imágenes.
+		if (!f.type.match('image.*')) {
+			continue;
+		}
+		let reader = new FileReader();
+		reader.onload = (function(theFile) {
+			return function(e) {
+				// Creamos la imagen.
+				document.querySelector(".prev-photo").innerHTML = ['<img class="thumb" width="120" height="120" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+			};
+		})(f);
+		reader.readAsDataURL(f);
 	}
-	let reader = new FileReader();
-	reader.onload = (function(theFile) {
-		return function(e) {
-			// Creamos la imagen.
-			document.querySelector(".prev-photo").innerHTML = ['<img class="thumb" width="120" height="120" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-		};
-	})(f);
-	reader.readAsDataURL(f);
-}
 }
 
 //Upload profile picture
