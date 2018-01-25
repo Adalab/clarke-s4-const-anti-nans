@@ -3,24 +3,22 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
 
+// Components
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/reset';
+@import 'components/styles';
+@import 'components/typography';
+
 // Core
 @import 'core/functions';
 @import 'core/mixins';
 @import 'core/variables';
 
 // Layout
-@import 'layout/header';
 @import 'layout/footer';
 @import 'layout/grid';
-
-// Components
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/hero';
-@import 'components/newsletter';
-@import 'components/typography';
-@import 'components/reset';
-@import 'components/styles';
+@import 'layout/header';
 
 // Pages
 @import 'pages/about-us';
