@@ -7,12 +7,22 @@
 /*SIZES*/
 /*SECTION COLOR CV*/
 /*DATA COLORS*/
+/*FOOTER*/
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  background-color: #272727; }
+  @media all and (min-width: 900px) {
+    .footer {
+      width: 100%; } }
+
+.copy {
+  color: white; }
+
 /*CABECERA*/
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text");
-@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 .header {
   position: fixed;
   top: 0;
@@ -60,20 +70,6 @@
   align-items: center;
   padding-right: 20px;
   list-style-type: none; }
-
-/*FOOTER*/
-.footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 70px;
-  background-color: #272727; }
-  @media all and (min-width: 900px) {
-    .footer {
-      width: 100%; } }
-
-.copy {
-  color: white; }
 
 .button {
   margin: 10px auto;
@@ -393,46 +389,6 @@ fieldset {
   width: 60%;
   font-size: 16px; }
 
-* {
-  box-sizing: border-box;
-  font-family: 'Rubik', sans-serif; }
-
-.principal-title {
-  width: 100%;
-  text-align: center;
-  color: #FFAB33;
-  font-size: 3em;
-  margin-top: 170px;
-  display: flex;
-  justify-content: center;
-  font-family: 'Indie Flower';
-  font-weight: bold; }
-  @media all and (min-width: 700px) {
-    .principal-title {
-      font-size: 4em; } }
-
-.title {
-  font-family: 'Indie Flower';
-  font-size: 4em; }
-  @media all and (min-width: 700px) {
-    .title {
-      font-size: 6em; } }
-  @media all and (min-width: 900px) {
-    .title {
-      font-size: 7em; } }
-
-/*PREVIO CV*/
-.prev-titles {
-  font-size: 15px;
-  font-weight: bold;
-  margin-top: 0px;
-  width: 100%;
-  text-align: left; }
-
-.camps-titles {
-  font-weight: bold;
-  display: inline; }
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -670,6 +626,46 @@ li {
     width: 24%; }
   .prev-list-personal {
     width: 74%; } }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif; }
+
+.principal-title {
+  width: 100%;
+  text-align: center;
+  color: #FFAB33;
+  font-size: 3em;
+  margin-top: 170px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Indie Flower';
+  font-weight: bold; }
+  @media all and (min-width: 700px) {
+    .principal-title {
+      font-size: 4em; } }
+
+.title {
+  font-family: 'Indie Flower';
+  font-size: 4em; }
+  @media all and (min-width: 700px) {
+    .title {
+      font-size: 6em; } }
+  @media all and (min-width: 900px) {
+    .title {
+      font-size: 7em; } }
+
+/*PREVIO CV*/
+.prev-titles {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0px;
+  width: 100%;
+  text-align: left; }
+
+.camps-titles {
+  font-weight: bold;
+  display: inline; }
 
 .principal-content {
   display: flex;
