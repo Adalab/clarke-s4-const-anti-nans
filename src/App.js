@@ -1,5 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import aboutus from './images/aboutus.svg';
+import background1 from './images/background1.jpeg';
+//import background3 from './images/background3.jpg';
+//import compartir1 from './images/compartir1.jpg';
+import compartir2 from './images/compartir2.png';
+//import Crimson from './images/Crimson.png';
+import education from './images/education.svg';
+import escribe from './images/escribe.svg';
+import fuente from './images/fuente.png';
+import Josefin from './images/Josefin.png';
+import linkedin from './images/linkedin.svg';
+import logo from './images/logo.png';
+import paleta from './images/paleta.png';
+//import Playfair-Display from './images/Playfair-Display.png';
+import preview1 from './images/preview1.svg';
+import print from './images/print.svg';
+import remove from './images/remove.svg';
+import skills from './images/skills.svg';
+import style from './images/style.svg';
+import suitcase from './images/suitcase.svg';
+//import twitter from './images/twitter.svg';
 import './scss/main.css';
 
 class App extends Component {
@@ -11,23 +32,23 @@ class App extends Component {
 
         <header id="header" className="header">
           <div className="logo-cabecera">
-            <a href="index.html"><img src="src/images/logo.png" alt="logo-equipo"/></a>
+            <a href="index.html"><img src={logo} alt="logo-equipo"/></a>
           </div>
           <nav>
             <ul className="menu">
               <li>
-                <a href="http://www.twitter.com/share?url=https://adalab.github.io/clarke-s2-nan" target="_blank"/><img className="compartir" src="src/images/compartir2.png" alt="compartir"/>
+                <a href="http://www.twitter.com/share?url=https://adalab.github.io/clarke-s2-nan" target="_blank"/><img className="compartir" src={compartir2} alt="compartir"/>
               </li>
 
               <li>
-                <img className="preview" src="src/images/preview1.svg" alt="vista previa"/>
+                <img className="preview" src={preview1} alt="vista previa"/>
               </li>
               <li>
-                <img className="print" src="src/images/print.svg" alt="icono imprimir"/>
+                <img className="print" src={print} alt="icono imprimir"/>
               </li>
               <li>
                 <a className="link-aboutus" href="about-us.html">
-                  <img className="aboutus" src="src/images/aboutus.svg" alt="about us"/>
+                  <img className="aboutus" src={aboutus} alt="about us"/>
                 </a>
               </li>
             </ul>
@@ -40,14 +61,14 @@ class App extends Component {
             <ul className="personalizar">
               <li className="perscolor">
                 <div>
-                  <img src="src/images/paleta.png" alt="paleta"/>
+                  <img src={paleta} alt="paleta"/>
                 </div>
                 <div><p>Paso 1: Elige el color</p>
                 </div>
               </li>
               <li className="persfuente">
                 <div>
-                  <img src="src/images/fuente.png" alt="fuente"/>
+                  <img src={fuente} alt="fuente"/>
                 </div>
                 <div>
                   <p>Paso 2: Elige la fuente</p>
@@ -55,7 +76,7 @@ class App extends Component {
               </li>
               <li className="persestilo">
                 <div>
-                  <img src="src/images/escribe.svg" className="lapiz" alt="lapiz"/>
+                  <img src={escribe} className="lapiz" alt="lapiz"/>
                 </div>
                 <div><p>Paso 3: Rellena tus datos</p>
                 </div>
@@ -287,7 +308,7 @@ class App extends Component {
             <section className="prev-info-personaldates prev-contact color-lateral">
               <h1 className="prev-titles">Datos de contacto</h1>
               <div className="prev-photo prev-personalcontent">
-                <img src="src/images/background1.jpeg" alt="Foto Personal" width="120" height="120" id="foto"/>
+                <img src={background1} alt="Foto Personal" width="120" height="120" id="foto"/>
               </div>
               <ul className="prev-list-personal">
                 <li id="nombre" className="prev-contactdetails ">Nombre</li>
