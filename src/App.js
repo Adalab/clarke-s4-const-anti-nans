@@ -25,6 +25,7 @@ updateState(prop, value){
 					<main id="principal-content" className="principal-content">
 						<h1 className="principal-title">Crea tu propio CV</h1>
 						<Hero />
+<<<<<<< HEAD
 						<Form updatePreview={this.updateState} />
 						<Preview
 							name={this.state.name}
@@ -42,8 +43,14 @@ updateState(prop, value){
 							</main>
 				<Footer />
 			</body>
+=======
+						<Form />
+						<Preview />
+					</main>
+					<Footer />
+				</body>
+>>>>>>> debf6b1ec1d0bffb5ed514a45c26528b79f953ab
       </div>
-
     );
   }
 }
