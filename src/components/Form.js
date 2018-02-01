@@ -115,15 +115,15 @@ class Form extends Component {
                 <div id="job-data" className="boxfield hidden">
                   <div className="input-form">
                     <label for="job">Puesto de trabajo</label>
-                    <input id="job" type="text" name="job" className="job-fields"/>
+                    <input onChange={this.handleChange} id="job" type="text" name="job" className="job-fields"/>
                   </div>
                   <div className="input-form">
                     <label for="job-charge">Cargo:</label>
-                    <input id="job-charge" type="text" name="job-charge" className="job-fields"/>
+                    <input onChange={this.handleChange} id="job-charge" type="text" name="job-charge" className="job-fields"/>
                   </div>
                   <div className="input-form">
                     <label for="job-bussines">Empresa:</label>
-                    <input id="job-bussines" type="text" name="job-bussines" className="job-fields"/>
+                    <input onChange={this.handleChange} id="job-bussines" type="text" name="job-bussines" className="job-fields"/>
                   </div>
                   <div className="input-form date">
                     <div className="input-form initialmonth">
@@ -147,13 +147,13 @@ class Form extends Component {
                   </div>
                   <div className="input-form">
                     <label for="job-extract">Descripción del cargo</label>
-                    <textarea id="job-extract" name="job-extract" rows="6" cols="40" className="job-fields"></textarea>
+                    <textarea onChange={this.handleChange} id="job-extract" name="job-extract" rows="6" cols="40" className="job-fields"></textarea>
                   </div>
-                  <div className="input-form-buttoms">
+									{/* <div className="input-form-buttoms">
                     <input type="reset" name="delete" value="Borrar"/>
                     <input type="button" name="add" className="add-job"value="Añadir"/>
                     <input type="button" name="save" value="Guardar" className="save-job"/>
-                  </div>
+									</div>  */}
                 </div>
               </fieldset>
               <fieldset id="edufiel" className="section">

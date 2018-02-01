@@ -41,7 +41,7 @@ class Preview extends Component {
             <section className="prev-professionalexperience">
               <h2 className="prev-titles">Formación profesional</h2><hr/>
               <ul className="prev-jobdetails">
-
+								
               </ul>
             </section>
           </section>
@@ -83,5 +83,7 @@ Preview.defaultProps = {
 	job: "Puesto actual",
 	jobCharge: "Cargo",
 	jobBusiness: "Empresa",
+	jobExtract: "Descripción del cargo"
+
 }
 export default Preview;
