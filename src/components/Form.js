@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 
+
 class Form extends Component {
+	constructor(props){
+		super(props);
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(event){
+		this.props.updatePreview(event.target.name, event.target.value);
+	}
   render() {
     return (
           <section className="forms">
@@ -53,44 +62,44 @@ class Form extends Component {
                   </div>
                   <div className="input-form">
                     <label for="name">Nombre*</label>
-                    <input id="name" type="text" name="name" required className="personal-fields" maxlength="55"/>
+                    <input onChange={this.handleChange} id="name" type="text" name="name" required className="personal-fields" maxlength="55"/>
                   </div>
                   <div className="input-form">
                     <label for="surnames">Apellidos*</label>
-                    <input id="surnames" type="text" name="surnames" required className="personal-fields" maxlength="55"/>
+                    <input onChange={this.handleChange} id="surnames" type="text" name="surnames" required className="personal-fields" maxlength="55"/>
                   </div>
                   <div className="input-form">
                     <label for="email">Email*</label>
-                    <input id="email" type="email" name="email" required className="personal-fields" maxlength="55"/>
+                    <input onChange={this.handleChange} id="email" type="email" name="email" required className="personal-fields" maxlength="55"/>
                   </div>
                   <div className="input-form">
                     <label for="phone">Teléfono</label>
-                    <input id="phone" type="tel" name="phone" className="personal-fields" maxlength="55"/>
+                    <input onChange={this.handleChange} id="phone" type="tel" name="phone" className="personal-fields" maxlength="55"/>
                   </div>
                   <div className="input-form">
                     <label for="address">Dirección</label>
-                    <input id="address" type="text" name="address" className="personal-fields" maxlength="55"/>
+                    <input onChange={this.handleChange} id="address" type="text" name="address" className="personal-fields" maxlength="55"/>
                   </div>
                   <div className="input-form">
                     <label for="profession">Profesión*</label>
-                    <input id="profession" type="text" name="profession" required className="personal-fields" maxlength="55"/>
+                    <input onChange={this.handleChange} id="profession" type="text" name="profession" required className="personal-fields" maxlength="55"/>
                   </div>
                   <div className="input-form networks">
                     <p className="socialNetworks">Redes sociales</p>
                     <div className="twitterNetwork">
                       <span className="twitterLogo"></span>
                       <label for="twitter">Twitter</label>
-                      <input id="twitter" type="text" name="twitter" className="personal-fields" maxlength="55"/>
+                      <input onChange={this.handleChange} id="twitter" type="text" name="twitter" className="personal-fields" maxlength="55"/>
                     </div>
                     <div className="linkedinNetwork">
                       <span className="linkedinLogo"></span>
                       <label for="linkedin">LinkedIn</label>
-                      <input className="linkedin personal-fields" id="linkedin" type="url" name="linkedin"/>
+                      <input onChange={this.handleChange} className="linkedin personal-fields" id="linkedin" type="url" name="linkedin"/>
                     </div>
                   </div>
                   <div className="input-form">
                     <label for="summary">Extracto</label>
-                    <textarea id="summary" name="comments" rows="6" cols="40" className="personal-fields"></textarea>
+                    <textarea onChange={this.handleChange} id="summary" name="summary" rows="6" cols="40" className="personal-fields"></textarea>
                   </div>
                   <div className="input-form-buttoms">
                     <input type="reset" name="delete" value="Borrar"/>
