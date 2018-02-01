@@ -10,18 +10,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-			<body className="body">
-				<Header />
-				<main id="principal-content" className="principal-content">
-				<h1 className="principal-title">Crea tu propio CV</h1>
-				<Hero />
-				<Form />
-				<Preview />
-				</main>
-				<Footer />
-			</body>
+				<body className="body">
+					<Header />
+					<main id="principal-content" className="principal-content">
+						<h1 className="principal-title">Crea tu propio CV</h1>
+						<Hero />
+						<Form />
+						<Preview />
+					</main>
+					<Footer />
+				</body>
       </div>
-
     );
   }
 }
