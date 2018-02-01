@@ -13,6 +13,7 @@ class App extends Component {
 		this.updateState = this.updateState.bind(this);
 	}
 updateState(prop, value){
+	console.log(prop + ':' + value);
 	const newState = {};
 	newState[prop] = value;
 	this.setState(newState);
@@ -25,7 +26,7 @@ updateState(prop, value){
 					<main id="principal-content" className="principal-content">
 						<h1 className="principal-title">Crea tu propio CV</h1>
 						<Hero />
-<<<<<<< HEAD
+
 						<Form updatePreview={this.updateState} />
 						<Preview
 							name={this.state.name}
@@ -34,22 +35,17 @@ updateState(prop, value){
 							phone={this.state.phone}
 							address={this.state.address}
 							profession={this.state.profession}
+							summary={this.state.summary}
 							twitter={this.state.twitter}
 							linkedin={this.state.linkedin}
 							job={this.state.job}
 							jobCharge={this.state.jobCharte}
 							jobBusiness={this.state.jobBusiness} />
 
-							</main>
-				<Footer />
-			</body>
-=======
-						<Form />
-						<Preview />
 					</main>
 					<Footer />
 				</body>
->>>>>>> debf6b1ec1d0bffb5ed514a45c26528b79f953ab
+
       </div>
     );
   }

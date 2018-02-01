@@ -99,7 +99,7 @@ class Form extends Component {
                   </div>
                   <div className="input-form">
                     <label for="summary">Extracto</label>
-                    <textarea onChange={this.handleChange} id="summary" name="comments" rows="6" cols="40" className="personal-fields"></textarea>
+                    <textarea onChange={this.handleChange} id="summary" name="summary" rows="6" cols="40" className="personal-fields"></textarea>
                   </div>
                   <div className="input-form-buttoms">
                     <input type="reset" name="delete" value="Borrar"/>
