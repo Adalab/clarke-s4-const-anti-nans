@@ -222,12 +222,6 @@ class Form extends Component {
 										<label for="details">Datos de interés</label>
 										<input id="details" type="text" name="other" className="other-fields" onChange={this.handleChange}/>
 									</div>
-
-									{/* <div className="input-form-buttoms">
-
-										<input type="reset" name="delete" value="Borrar" className="delete"/>
-										<input type="button" name="add" value="Añadir" className="add-detail"/>
-									</div>  */}
 								</div>
 							</fieldset>
 						</form>
