@@ -26,7 +26,7 @@ class Preview extends Component {
           </ul>
         </section>
         <section className="prev-description">
-          <h2 className="prev-titles"></h2><hr/>
+          <h2 className="prev-titles">Extracto</h2><hr/>
           <p id="resumen" className="prev-contactdetails">{this.props.summary}</p>
         </section>
         <div className="prev-content">
@@ -60,7 +60,8 @@ class Preview extends Component {
             </section>
 
             <section className="prev-interestdetails">
-              <h2 className="prev-titles">Otros datos de interés</h2><hr/><p className="prev-other"></p>
+              <h2 className="prev-titles">Otros datos de interés</h2><hr/>
+							<p className="prev-other">{this.props.other}</p>
             </section>
           </section>
         </div>
@@ -83,5 +84,7 @@ Preview.defaultProps = {
 	job: "Puesto actual",
 	jobCharge: "Cargo",
 	jobBusiness: "Empresa",
+
+	other: ""
 }
 export default Preview;
