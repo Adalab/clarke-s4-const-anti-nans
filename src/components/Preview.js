@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import background1 from '../images/background1.jpeg';
 
+
+
 class Preview extends Component {
   render() {
     return (
@@ -12,19 +14,19 @@ class Preview extends Component {
                 <img src={background1} alt="Foto Personal" width="120" height="120" id="foto"/>
               </div>
               <ul className="prev-list-personal">
-                <li id="nombre" className="prev-contactdetails ">Nombre</li>
-                <li id="apellidos" className="prev-contactdetails">Apellidos</li>
-                <li id="profesion" className="prev-contactdetails">Profesión</li>
+                <li id="nombre" className="prev-contactdetails ">{this.props.name}</li>
+                <li id="apellidos" className="prev-contactdetails">{this.props.surname}</li>
+                <li id="profesion" className="prev-contactdetails">{this.props.profession}</li>
                 <li id="direccion" className="prev-contactdetails"></li>
-                <li id="mail" className="prev-contactdetails cut-url">ejemplo@gmail.com</li>
-                <li id="telefono" className="prev-contactdetails">666998811</li>
-                <li className="prev-contactdetails cut-url">Twitter</li>
-                <li className="prev-contactdetails cut-url">Linkedin</li>
+                <li id="mail" className="prev-contactdetails cut-url">{this.props.email}</li>
+                <li id="telefono" className="prev-contactdetails">{this.props.phone}</li>
+                <li className="prev-contactdetails cut-url">{this.props.twitter}</li>
+                <li className="prev-contactdetails cut-url">{this.props.linkedin}</li>
               </ul>
             </section>
             <section className="prev-description">
-              <h2 className="prev-titles">Extracto</h2><hr/>
-              <p id="resumen" className="prev-contactdetails">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+              <h2 className="prev-titles"></h2><hr/>
+              <p id="resumen" className="prev-contactdetails">{this.props.summary}</p>
             </section>
             <div className="prev-content">
               <section className="prev-info-experience">
@@ -66,5 +68,18 @@ class Preview extends Component {
     );
   }
 }
-
+Preview.defaultProps = {
+	name: "Nombre",
+	surname: "Apellidos",
+	email: "email",
+	phone: "Teléfono",
+	address: "Dirección",
+	profession: "Profesión",
+	twitter: "twitter",
+	linkedin: "linkedin",
+	summary: "Extracto",
+	job: "Puesto actual",
+	jobCharge: "Cargo",
+	jobBusiness: "Empresa",
+}
 export default Preview;
