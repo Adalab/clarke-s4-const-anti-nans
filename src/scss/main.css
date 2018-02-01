@@ -141,9 +141,6 @@
   cursor: pointer;
   box-shadow: 1px 1px 1px #B4B6B2; }
 
-fieldset {
-  margin-top: 15px; }
-
 /*FORMULARIO*/
 .contact-form {
   display: flex;
@@ -184,6 +181,8 @@ fieldset {
   padding: 15px;
   margin: auto;
   padding-bottom: 50px; }
+  .total-form fieldset {
+    margin-top: 15px; }
 
 .input-form {
   padding: 10px 15px; }
