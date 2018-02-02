@@ -7,7 +7,6 @@ class Preview extends Component {
 
   render() {
     return (
-
       <section id="printcv" className="cv type-font">
         <section className="prev-info-personaldates prev-contact color-lateral">
           <h1 className="prev-titles">Datos de contacto</h1>
@@ -16,7 +15,7 @@ class Preview extends Component {
           </div>
           <ul className="prev-list-personal">
             <li id="nombre" className="prev-contactdetails ">{this.props.name}</li>
-            <li id="apellidos" className="prev-contactdetails">{this.props.surname}</li>
+            <li id="apellidos" className="prev-contactdetails">{this.props.surnames}</li>
             <li id="profesion" className="prev-contactdetails">{this.props.profession}</li>
             <li id="direccion" className="prev-contactdetails"></li>
             <li id="mail" className="prev-contactdetails cut-url">{this.props.email}</li>
@@ -43,11 +42,15 @@ class Preview extends Component {
               <div className="prev-jobdetails">
 								{
            				this.props.jobArr.map((job,i) =>
-										<div key={i}>
-											<p>{job.job}</p>
-											<p>{job.jobCharge}</p>
-
-										</div>
+										<ul key={i}>
+											<li><strong>Puesto de trabajo: </strong>{job.job}</li>
+											<li><strong>Cargo: </strong>{job.jobCharge}</li>
+											<li><strong>Empresa: </strong>{job.jobBussines}</li>
+											<li><strong>Fecha de inicio: </strong>{job.jobStartDate}</li>
+											<li><strong>Fecha de fin: </strong>{job.jobEndDate}</li>
+											<li><strong>Descripción del cargo: </strong>{job.jobExtract}</li>
+											<li> * * * * * * </li>
+										</ul>
 								 )
 
 								 }
@@ -76,14 +79,14 @@ class Preview extends Component {
           </section>
         </div>
       </section>
-
     );
   }
 
 }
+
 Preview.defaultProps = {
 	name: "Nombre",
-	surname: "Apellidos",
+	surnames: "Apellidos",
 	email: "email",
 	phone: "Teléfono",
 	address: "Dirección",
@@ -93,4 +96,5 @@ Preview.defaultProps = {
 	summary: "Extracto",
 	other: ""
 }
+
 export default Preview;

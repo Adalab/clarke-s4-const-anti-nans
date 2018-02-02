@@ -37,10 +37,11 @@ class App extends Component {
 						<Hero />
 						<Form
 							updatePreview={this.updateState}
-							updateJobsPreview={this.updateJobState} />
+							updateJobsPreview={this.updateJobState}
+						/>
 						<Preview
 							name={this.state.name}
-							surname={this.state.surname}
+							surnames={this.state.surnames}
 							email={this.state.email}
 							phone={this.state.phone}
 							address={this.state.address}
@@ -49,7 +50,7 @@ class App extends Component {
 							twitter={this.state.twitter}
 							linkedin={this.state.linkedin}
 							jobArr={this.state.jobArr}
-							other={this.state.other}/>
+							other={this.state.other} />
 
 					</main>
 					<Footer />
