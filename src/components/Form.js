@@ -213,25 +213,19 @@ class Form extends Component {
                   </div>
                 </div>
               </fieldset>
-              <fieldset id="otherdetfiel" className="section">
-                <legend className="openMenu">Otros datos de interés
-                  <span className="btnSection btnOtherDetails"></span>
-                </legend>
-                <div id="other-data" className="boxfield hidden">
-                  <div className="input-form">
-                    <label for="details">Datos de interés</label>
-                    <input id="details" type="text" name="details" className="other-fields"/>
-                  </div>
-
-                  <div className="input-form-buttoms">
-
-                    <input type="reset" name="delete" value="Borrar" className="delete"/>
-                    <input type="button" name="add" value="Añadir" className="add-detail"/>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-          </section>
+							<fieldset id="otherdetfiel" className="section">
+								<legend className="openMenu">Otros datos de interés
+									<span className="btnSection btnOtherDetails"></span>
+								</legend>
+								<div id="other-data" className="boxfield hidden">
+									<div className="input-form">
+										<label for="details">Datos de interés</label>
+										<input id="details" type="text" name="other" className="other-fields" onChange={this.handleChange}/>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</section>
 
     );
   }

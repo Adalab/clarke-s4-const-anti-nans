@@ -41,8 +41,8 @@ updateState(prop, value){
 							job={this.state.job}
 							jobCharge={this.state.jobCharte}
 							jobBusiness={this.state.jobBusiness}
-							jobExtract={this.state.jobExtract}
-						/>
+							other={this.state.other}/>
+
 
 					</main>
 					<Footer />
