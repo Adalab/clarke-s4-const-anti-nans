@@ -9,12 +9,16 @@ import './scss/main.css';
 class App extends Component {
 	constructor(props){
 		super(props);
-		this.state={
-			jobArr: []
-		};
 		this.updateState = this.updateState.bind(this);
 		this.updateJobState = this.updateJobState.bind(this);
+		this.updateStudyState = this.updateStudyState.bind(this);
+
+		this.state={
+			jobArr: [],
+			studyArr:[]
+		};
 	}
+
 	updateState(prop, value){
 		const newState = {};
 		newState[prop] = value;
@@ -24,6 +28,12 @@ class App extends Component {
 	updateJobState(job){
 		this.setState(prevState => ({
     	jobArr: [...prevState.jobArr, job]
+		}))
+	}
+
+	updateStudyState(study){
+		this.setState(prevState => ({
+    	studyArr: [...prevState.studyArr, study]
 		}))
 	}
 
@@ -38,6 +48,7 @@ class App extends Component {
 						<Form
 							updatePreview={this.updateState}
 							updateJobsPreview={this.updateJobState}
+							updateStudyPreview={this.updateStudyState}
 						/>
 						<Preview
 							name={this.state.name}
@@ -50,6 +61,7 @@ class App extends Component {
 							twitter={this.state.twitter}
 							linkedin={this.state.linkedin}
 							jobArr={this.state.jobArr}
+							studyArr={this.state.studyArr}
 							other={this.state.other} />
 
 					</main>

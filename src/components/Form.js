@@ -5,12 +5,20 @@ class Form extends Component {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleJob = this.handleJob.bind(this);
+		this.handleStudy = this.handleStudy.bind(this);
 		this.handleAddJob = this.handleAddJob.bind(this);
+		this.handleAddStudy = this.handleAddStudy.bind(this);
+
 		this.state = {
 			job: {
 				job: " ",
 				jobCharge: " ",
 				jobBusiness: " "
+			},
+			study:{
+				educationStudies: " ",
+				educationInstitution: " ",
+				educationExtract: " "
 			}
 		}
 	}
@@ -26,6 +34,16 @@ class Form extends Component {
 				jobCharge: this.refs.jobCharge.value,
 				jobBussines: this.refs.jobBussines.value,
 				jobExtract: this.refs.jobExtract.value
+			},
+		});
+	}
+
+	handleStudy(event){
+		this.setState({
+			study:{
+				educationStudies: this.refs.educationStudies.value,
+				educationInstitution: this.refs.educationInstitution.value,
+				educationExtract: this.refs.educationExtract.value
 			}
 		});
 	}
@@ -33,6 +51,10 @@ class Form extends Component {
 	handleAddJob(event){
 		let job = this.state.job
 		this.props.updateJobsPreview(job);
+	}
+	handleAddStudy(event){
+		let study = this.state.study
+		this.props.updateStudyPreview(study);
 	}
 
   render() {
@@ -176,7 +198,7 @@ class Form extends Component {
               </div>
               <div className="input-form-buttoms">
                 <input type="reset" name="delete" value="Borrar"/>
-                <input type="button" name="add" onClick={this.handleAddJob } className="add-job"value="Añadir"/>
+                <input type="button" name="add" onClick={this.handleAddJob } className="add-job" value="Añadir"/>
               </div>
             </div>
           </fieldset>
@@ -187,7 +209,7 @@ class Form extends Component {
             <div id="education-data" className="boxfield hidden">
               <div className="input-form">
                 <label for="education-studies">Titulación</label>
-                <input type="text" id="education-studies" name="education-studies" required className="edu-fields"/>
+                <input onChange={this.handleStudy} ref="educationStudies" id="educationStudies" type="text" name="education-studies" required className="edu-fields"/>
               </div>
               <div className="input-form">
                 <label for="education-type-studies">Tipo de estudios</label>
@@ -196,7 +218,7 @@ class Form extends Component {
               </div>
               <div className="input-form">
                 <label for="education-institution">Centro de estudios</label>
-                <input className="edu-fields" type="text" id="education-institution" name="education-institution" required/>
+                <input onChange={this.handleStudy} ref="educationInstitution" id="educationInstitution" type="text"  name="education-institution" required className="edu-fields"/>
               </div>
               <div className="input-form date">
                 <div className="input-form initialyear">
@@ -211,11 +233,11 @@ class Form extends Component {
               </div>
               <div className="input-form">
                 <label for="education-extract">Descripción</label>
-                <textarea id="education-extract" name="education-extract" rows="6" cols="40" className="edu-fields"></textarea>
+                <textarea onChange={this.handleStudy} ref="educationExtract" id="educationExtract" name="education-extract" rows="6" cols="40" className="edu-fields"></textarea>
               </div>
               <div className="input-form-buttoms">
                 <input type="reset" name="delete" value="Borrar"/>
-                <input type="button" name="add" value="Añadir" className="add-edu"/>
+                <input type="button" name="add" onClick={this.handleAddStudy } value="Añadir" className="add-edu"/>
               </div>
             </div>
           </fieldset>

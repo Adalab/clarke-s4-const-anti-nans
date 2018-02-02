@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import background1 from '../images/background1.jpeg';
 
-
-
 class Preview extends Component {
 
   render() {
@@ -29,17 +27,28 @@ class Preview extends Component {
           <p id="resumen" className="prev-contactdetails">{this.props.summary}</p>
         </section>
         <div className="prev-content">
-          <section className="prev-info-experience">
-            <section className="prev-education">
+					<section className="prev-info-experience">
+						<section className="prev-education">
               <h2 className="prev-titles">Formación académica</h2><hr/>
-              <ul className="prev-educationdetails">
+              <div className="prev-educationdetails">
+								{
+           				this.props.studyArr.map((study,i) =>
+										<ul key={i}>
+											<li><strong>Titulación: </strong>{study.educationStudies}</li>
+											<li><strong>Tipo de estudios: </strong>{study.undefine}</li>
+											<li><strong>Centro de estudios: </strong>{study.educationInstitution}</li>
+											<li><strong>Año de inicio: </strong>{study.jobStartDate}</li>
+											<li><strong>Año de finalización: </strong>{study.jobEndDate}</li>
+											<li><strong>Descripción: </strong>{study.educationExtract}</li>
+											<li>  </li>
+										</ul>)
+								}
+              </div>
+						</section>
 
-              </ul>
-            </section>
-
-            <section className="prev-professionalexperience">
-              <h2 className="prev-titles">Formación profesional</h2><hr/>
-              <div className="prev-jobdetails">
+						<section className="prev-professionalexperience">
+							<h2 className="prev-titles">Formación profesional</h2><hr/>
+							<div className="prev-jobdetails">
 								{
            				this.props.jobArr.map((job,i) =>
 										<ul key={i}>
@@ -49,16 +58,14 @@ class Preview extends Component {
 											<li><strong>Fecha de inicio: </strong>{job.jobStartDate}</li>
 											<li><strong>Fecha de fin: </strong>{job.jobEndDate}</li>
 											<li><strong>Descripción del cargo: </strong>{job.jobExtract}</li>
-											<li> * * * * * * </li>
-										</ul>
-								 )
+											<li>  </li>
+										</ul>)
+								}
+							</div>
+						</section>
+					</section>
 
-								 }
-              </div>
-            </section>
-          </section>
-
-          <section className="prev-info-extra color-base">
+					<section className="prev-info-extra color-base">
             <section className="prev-skills">
               <h2 className="prev-titles">Habilidades</h2><hr/>
               <ul className="box-skills">
@@ -76,9 +83,9 @@ class Preview extends Component {
               <h2 className="prev-titles">Otros datos de interés</h2><hr/>
 							<p className="prev-other">{this.props.other}</p>
             </section>
-          </section>
-        </div>
-      </section>
+					</section>
+				</div>
+			</section>
     );
   }
 
