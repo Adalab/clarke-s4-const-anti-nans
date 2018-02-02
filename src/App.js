@@ -9,15 +9,24 @@ import './scss/main.css';
 class App extends Component {
 	constructor(props){
 		super(props);
-		this.state={};
+		this.state={
+			jobArr: []
+		};
 		this.updateState = this.updateState.bind(this);
+		this.updateJobState = this.updateJobState.bind(this);
 	}
-updateState(prop, value){
-	console.log(prop + ':' + value);
-	const newState = {};
-	newState[prop] = value;
-	this.setState(newState);
-}
+	updateState(prop, value){
+		const newState = {};
+		newState[prop] = value;
+		this.setState(newState);
+	}
+
+	updateJobState(job){
+		this.setState(prevState => ({
+    	jobArr: [...prevState.jobArr, job]
+		}))
+	}
+
   render() {
     return (
       <div className="App">
@@ -26,8 +35,9 @@ updateState(prop, value){
 					<main id="principal-content" className="principal-content">
 						<h1 className="principal-title">Crea tu propio CV</h1>
 						<Hero />
-
-						<Form updatePreview={this.updateState} />
+						<Form
+							updatePreview={this.updateState}
+							updateJobsPreview={this.updateJobState} />
 						<Preview
 							name={this.state.name}
 							surname={this.state.surname}
@@ -38,10 +48,7 @@ updateState(prop, value){
 							summary={this.state.summary}
 							twitter={this.state.twitter}
 							linkedin={this.state.linkedin}
-							job={this.state.job}
-							jobCharge={this.state.jobCharte}
-							jobBusiness={this.state.jobBusiness}
-
+							jobArr={this.state.jobArr}
 							other={this.state.other}/>
 
 					</main>

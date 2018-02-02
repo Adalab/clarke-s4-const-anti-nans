@@ -40,11 +40,21 @@ class Preview extends Component {
 
             <section className="prev-professionalexperience">
               <h2 className="prev-titles">Formación profesional</h2><hr/>
-              <ul className="prev-jobdetails">
+              <div className="prev-jobdetails">
+								{
+           				this.props.jobArr.map((job,i) =>
+										<div key={i}>
+											<p>{job.job}</p>
+											<p>{job.jobCharge}</p>
 
-              </ul>
+										</div>
+								 )
+
+								 }
+              </div>
             </section>
           </section>
+
           <section className="prev-info-extra color-base">
             <section className="prev-skills">
               <h2 className="prev-titles">Habilidades</h2><hr/>
@@ -81,10 +91,6 @@ Preview.defaultProps = {
 	twitter: "twitter",
 	linkedin: "linkedin",
 	summary: "Extracto",
-	job: "Puesto actual",
-	jobCharge: "Cargo",
-	jobBusiness: "Empresa",
-
 	other: ""
 }
 export default Preview;

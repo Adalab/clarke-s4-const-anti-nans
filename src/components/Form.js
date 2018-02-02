@@ -5,11 +5,34 @@ class Form extends Component {
 	constructor(props){
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
+		this.handleJob = this.handleJob.bind(this);
+		this.handleAddJob = this.handleAddJob.bind(this);
+		this.state = {
+			job: {
+				job: " ",
+				jobCharge: " ",
+				jobBusiness: " "
+			}
+		}
 	}
 
 	handleChange(event){
 		this.props.updatePreview(event.target.name, event.target.value);
 	}
+
+	handleJob(event){
+		this.setState({
+			job:{
+				job: event.target.value,
+				jobCharge: event.target.value,
+			}
+		});
+	}
+	handleAddJob(event){
+		let job = this.state.job
+		this.props.updateJobsPreview(job);
+	}
+
   render() {
     return (
           <section className="forms">
@@ -101,10 +124,10 @@ class Form extends Component {
                     <label for="summary">Extracto</label>
                     <textarea onChange={this.handleChange} id="summary" name="summary" rows="6" cols="40" className="personal-fields"></textarea>
                   </div>
-                  <div className="input-form-buttoms">
+                  {/* <div className="input-form-buttoms">
                     <input type="reset" name="delete" value="Borrar"/>
                     <input type="button" name="save" value="Guardar" className="save-personal"/>
-                  </div>
+                  </div> */}
                 </div>
               </fieldset>
               <fieldset id="jobfiel" className="section">
@@ -115,11 +138,11 @@ class Form extends Component {
                 <div id="job-data" className="boxfield hidden">
                   <div className="input-form">
                     <label for="job">Puesto de trabajo</label>
-                    <input id="job" type="text" name="job" className="job-fields"/>
+                    <input onChange={this.handleJob} id="job" type="text" name="job" className="job-fields"/>
                   </div>
                   <div className="input-form">
                     <label for="job-charge">Cargo:</label>
-                    <input id="job-charge" type="text" name="job-charge" className="job-fields"/>
+                    <input onChange={this.handleJob}id="job-charge" type="text" name="job-charge" className="job-fields"/>
                   </div>
                   <div className="input-form">
                     <label for="job-bussines">Empresa:</label>
@@ -151,8 +174,7 @@ class Form extends Component {
                   </div>
                   <div className="input-form-buttoms">
                     <input type="reset" name="delete" value="Borrar"/>
-                    <input type="button" name="add" className="add-job"value="Añadir"/>
-                    <input type="button" name="save" value="Guardar" className="save-job"/>
+                    <input type="button" name="add" onClick={this.handleAddJob } className="add-job"value="Añadir"/>
                   </div>
                 </div>
               </fieldset>
@@ -213,22 +235,21 @@ class Form extends Component {
                   </div>
                 </div>
               </fieldset>
-							<fieldset id="otherdetfiel" className="section">
-								<legend className="openMenu">Otros datos de interés
-									<span className="btnSection btnOtherDetails"></span>
-								</legend>
-								<div id="other-data" className="boxfield hidden">
-									<div className="input-form">
-										<label for="details">Datos de interés</label>
-										<input id="details" type="text" name="other" className="other-fields" onChange={this.handleChange}/>
-									</div>
-								</div>
-							</fieldset>
-						</form>
-					</section>
-
-    );
-  }
+					<fieldset id="otherdetfiel" className="section">
+						<legend className="openMenu">Otros datos de interés
+							<span className="btnSection btnOtherDetails"></span>
+						</legend>
+						<div id="other-data" className="boxfield hidden">
+							<div className="input-form">
+								<label for="details">Datos de interés</label>
+								<input id="details" type="text" name="other" className="other-fields" onChange={this.handleChange}/>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</section>
+		);
+	}
 }
 
 export default Form;
