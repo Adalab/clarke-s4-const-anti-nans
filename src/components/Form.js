@@ -83,10 +83,6 @@ class Form extends Component {
 										<input className="picture"
 											type="file"
 											onChange={(e)=>this.handleImageChange(e)} />
-										<button className="save-personal"
-											type="submit"
-											onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
-										
                   </div>
                   <div className="input-form">
                     <label for="name">Nombre*</label>
