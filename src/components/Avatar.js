@@ -42,7 +42,7 @@ class Avatar extends Component {
 		if (imagePreviewUrl) {
 			$imagePreview = (<img src={imagePreviewUrl} />);
 		} else {
-			$imagePreview = (<img src={background1} />);
+			$imagePreview = (<img src='../images/background1.jpeg' />);
 		}
 
 		return (
@@ -53,7 +53,8 @@ class Avatar extends Component {
 						onChange={(e)=>this.handleImageChange(e)} />
 				</form>
 				<div className="prev-photo">
-					{$imagePreview}
+					{this.state.imagePreviewUrl}
+					
 				</div>
 			</div>
 		);

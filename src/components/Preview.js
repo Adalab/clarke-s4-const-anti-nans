@@ -12,7 +12,10 @@ class Preview extends Component {
         <section className="prev-info-personaldates prev-contact color-lateral">
           <h1 className="prev-titles">Datos de contacto</h1>
 					<div className="prev-photo prev-personalcontent">
-						<img src={this.props.imagePreviewUrl} width="120" height="120" id="foto"/>
+						{this.props.imagePreviewUrl?
+							<img src={this.props.imagePreviewUrl} width="120" height="120" id="foto"/>
+						: <img src={background1} width="120" height="120" id="foto"/>
+						}
 					</div>
 
           <ul className="prev-list-personal">
