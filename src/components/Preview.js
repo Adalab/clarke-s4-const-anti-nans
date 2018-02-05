@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import background1 from '../images/background1.jpeg';
 
+
 class Preview extends Component {
 
 	render() {
@@ -37,8 +38,8 @@ class Preview extends Component {
 											<li><strong>Titulación: </strong>{study.educationStudies}</li>
 											<li><strong>Tipo de estudios: </strong>{study.typeStudies}</li>
 											<li><strong>Centro de estudios: </strong>{study.educationInstitution}</li>
-											<li><strong>Año de inicio: </strong>{study.startDate}</li>
-											<li><strong>Año de finalización: </strong>{study.endDate}</li>
+											<li><strong>Año de inicio: </strong>{study.yearInit}</li>
+											<li><strong>Año de finalización: </strong>{study.yearEnd}</li>
 											<li><strong>Descripción: </strong>{study.educationExtract}</li>
 											<li>  </li>
 										</ul>)
@@ -55,8 +56,8 @@ class Preview extends Component {
 											<li><strong>Puesto de trabajo: </strong>{job.job}</li>
 											<li><strong>Cargo: </strong>{job.jobCharge}</li>
 											<li><strong>Empresa: </strong>{job.jobBussines}</li>
-											<li><strong>Fecha de inicio: </strong>{job.startDate}</li>
-											<li><strong>Fecha de fin: </strong>{job.endDate}</li>
+											<li><strong>Fecha de inicio: </strong>{job.monthInit}/{job.yearInit}</li>
+											<li><strong>Fecha de fin: </strong>{job.monthEnd}/{job.yearEnd}</li>
 											<li><strong>Descripción del cargo: </strong>{job.jobExtract}</li>
 											<li>  </li>
 										</ul>)

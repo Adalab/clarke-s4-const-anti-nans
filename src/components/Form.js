@@ -13,13 +13,19 @@ class Form extends Component {
 			job: {
 				job: " ",
 				jobCharge: " ",
-				jobBusiness: " "
+				jobBusiness: " ",
+				monthInit: " ",
+				monthEnd: " ",
+				yearInit: " ",
+				yearEnd: " "
 			},
 			study:{
 				educationStudies: " ",
 				educationInstitution: " ",
 				typeStudies: " ",
-				educationExtract: " "
+				educationExtract: " ",
+				yearInit: " ",
+				yearEnd: " "
 			}
 		}
 	}
@@ -34,7 +40,11 @@ class Form extends Component {
 				job: this.refs.job.value,
 				jobCharge: this.refs.jobCharge.value,
 				jobBussines: this.refs.jobBussines.value,
-				jobExtract: this.refs.jobExtract.value
+				jobExtract: this.refs.jobExtract.value,
+				monthInit: this.refs.monthInit.value,
+				monthEnd: this.refs.monthEnd.value,
+				yearInit: this.refs.yearInit.value,
+				yearEnd: this.refs.yearEnd.value
 			},
 		});
 	}
@@ -45,7 +55,9 @@ class Form extends Component {
 				educationStudies: this.refs.educationStudies.value,
 				educationInstitution: this.refs.educationInstitution.value,
 				typeStudies: this.refs.typeStudies.value,
-				educationExtract: this.refs.educationExtract.value
+				educationExtract: this.refs.educationExtract.value,
+				yearInit: this.refs.yearInit.value,
+				yearEnd: this.refs.yearEnd.value
 			}
 		});
 	}
@@ -57,6 +69,36 @@ class Form extends Component {
 	handleAddStudy(event){
 		let study = this.state.study
 		this.props.updateStudyPreview(study);
+	}
+
+	selectYears() {
+		let years = [];
+		let actual = <option></option>;
+		years.push (actual);
+		for (let i = 1950; i <= 2018; i++) {
+			if (i === 1990){
+				years.push(<option key={i} value={i} selected="selected">{i} </option>);
+			}
+			else{
+				years.push(<option key={i} value={i}>{i}</option>);
+			}
+		}
+		return years;
+	}
+
+	selectMonths() {
+		let month = [];
+		let actual = <option></option>;
+		month.push (actual);
+		for (let i = 1; i <= 12; i++) {
+			if (i === 1){
+				month.push(<option key={i} value={i} selected="selected">{i} </option>);
+			}
+			else{
+				month.push(<option key={i} value={i}>{i}</option>);
+			}
+		}
+		return month;
 	}
 
 	render() {
@@ -150,13 +192,9 @@ class Form extends Component {
 								<label for="summary">Extracto</label>
 								<textarea onChange={this.handleChange} id="summary" name="summary" rows="6" cols="40" className="personal-fields"></textarea>
 							</div>
-							{/* <div className="input-form-buttoms">
-								<input type="reset" name="delete" value="Borrar"/>
-								<input type="button" name="save" value="Guardar" className="save-personal"/>
-							</div> */}
 						</div>
-
 					</fieldset>
+
 					<fieldset id="jobfiel" className="section">
 						<legend className="openMenu">Experiencia Laboral
 							<span className="btnSection btnJob"></span>
@@ -177,21 +215,21 @@ class Form extends Component {
 							<div className="input-form date">
 								<div className="input-form initialmonth">
 									<label for="job-month-start">Mes de inicio</label>
-									<select id="job-month-start" name="job-month-start" className="month job-fields"></select>
+									<select onClick={this.handleJob} ref="monthInit" id="job-month-start" name="job-month-start" className="month job-fields">{this.selectMonths()}</select>
 								</div>
 								<div className="input-form initialyear">
 									<label for="job-year-start">Año de inicio</label>
-									<select id="job-year-start" name="job-year-start" className="years job-fields"></select>
+									<select onClick={this.handleJob} ref="yearInit" id="job-year-start" name="job-year-start" className="years job-fields">{this.selectYears()}</select>
 								</div>
 							</div>
 							<div className="input-form date">
 								<div className="input-form finalmonth">
 									<label for="job-month-end">Mes de final</label>
-									<select id="job-month-end" name="job-month-end" className="month job-fields"></select>
+									<select onClick={this.handleJob} ref="monthEnd"id="job-month-end" name="job-month-end" className="month job-fields">{this.selectMonths()}</select>
 								</div>
 								<div className="input-form finalyear">
 									<label for="job-year-end">Año de final</label>
-									<select id="job-year-end" name="job-year-end" className="years job-fields"></select>
+									<select onClick={this.handleJob} ref="yearEnd" id="job-year-end" name="job-year-end" className="years job-fields">{this.selectYears()}</select>
 								</div>
 							</div>
 							<div className="input-form">
@@ -199,7 +237,6 @@ class Form extends Component {
 								<textarea onChange={this.handleJob} ref="jobExtract" id="jobExtract" name="job-extract" rows="6" cols="40" className="job-fields"></textarea>
 							</div>
 							<div className="input-form-buttoms">
-								{/* <input type="reset" name="delete" value="Borrar"/> */}
 								<input type="button" name="add" onClick={this.handleAddJob } className="add-job" value="Añadir"/>
 							</div>
 						</div>
@@ -215,7 +252,7 @@ class Form extends Component {
 							</div>
 							<div className="input-form">
 								<label for="education-type-studies">Tipo de estudios</label>
-								<select onChange={this.handleStudy} ref="typeStudies" id="education-type-studies" name="education-type-studies" className="type-studies edu-fields">
+								<select onClick={this.handleStudy} ref="typeStudies" id="education-type-studies" name="education-type-studies" className="type-studies edu-fields">
 									<option value="">Seleciona estudio</option>
 									<option value="Sin estudios obligados">Sin estudios obligados</option>
 									<option value="ESO">ESO</option>
@@ -234,12 +271,11 @@ class Form extends Component {
 							<div className="input-form date">
 								<div className="input-form initialyear">
 									<label for="education-year-start">Año de inicio</label>
-									<select id="education-year-start" name="education-year-start" className="years edu-fields-start">
-									</select>
+									<select onClick={this.handleStudy} ref="yearInit" id="education-year-start" name="education-year-start" className="years edu-fields-start">{this.selectYears()}</select>
 								</div>
 								<div className="input-form finalyear">
 									<label for="education-year-end">Año de finalización</label>
-									<select id="education-year-end" name="education-year-end" className="years edu-fields-end"></select>
+									<select onClick={this.handleStudy} ref="yearEnd" id="education-year-end" name="education-year-end" className="years edu-fields-end">{this.selectYears()}</select>
 								</div>
 							</div>
 							<div className="input-form">
@@ -247,7 +283,6 @@ class Form extends Component {
 								<textarea onChange={this.handleStudy} ref="educationExtract" id="educationExtract" name="education-extract" rows="6" cols="40" className="edu-fields"></textarea>
 							</div>
 							<div className="input-form-buttoms">
-								{/* <input type="reset" name="delete" value="Borrar"/> */}
 								<input type="button" name="add" onClick={this.handleAddStudy } value="Añadir" className="add-edu"/>
 							</div>
 						</div>
