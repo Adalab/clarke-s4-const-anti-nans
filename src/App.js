@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Preview from './components/Preview';
 import Form from './components/Form';
+import Avatar from './components/Avatar';
 import './scss/main.css';
 
 class App extends Component {
@@ -41,8 +42,10 @@ updateState(prop, value){
 							job={this.state.job}
 							jobCharge={this.state.jobCharte}
 							jobBusiness={this.state.jobBusiness}
-							other={this.state.other}/>
-						
+							other={this.state.other}
+							imagePreviewUrl={this.state.imagePreviewUrl}
+						/>
+
 
 					</main>
 					<Footer />

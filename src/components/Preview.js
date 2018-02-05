@@ -6,14 +6,15 @@ import background1 from '../images/background1.jpeg';
 class Preview extends Component {
 
   render() {
-    return (
 
+    return (
       <section id="printcv" className="cv type-font">
         <section className="prev-info-personaldates prev-contact color-lateral">
           <h1 className="prev-titles">Datos de contacto</h1>
-          <div className="prev-photo prev-personalcontent">
-            <img src={background1} alt="Foto Personal" width="120" height="120" id="foto"/>
-          </div>
+					<div className="prev-photo prev-personalcontent">
+						<img src={this.props.imagePreviewUrl} width="120" height="120" id="foto"/>
+					</div>
+
           <ul className="prev-list-personal">
             <li id="nombre" className="prev-contactdetails ">{this.props.name}</li>
             <li id="apellidos" className="prev-contactdetails">{this.props.surname}</li>

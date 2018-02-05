@@ -1,15 +1,37 @@
 import React, { Component } from 'react';
 
+import Avatar from './Avatar';
+
 
 class Form extends Component {
 	constructor(props){
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleImageChange = this.handleImageChange.bind(this);
 	}
 
 	handleChange(event){
 		this.props.updatePreview(event.target.name, event.target.value);
 	}
+	handleSubmit(e) {
+		e.preventDefault();
+	}
+
+	handleImageChange(e) {
+		e.preventDefault();
+
+		let reader = new FileReader();
+		let file = e.target.files[0];
+
+		reader.onloadend = () => {
+			this.props.updatePreview("file", file);
+			this.props.updatePreview("imagePreviewUrl", reader.result);
+		}
+
+		reader.readAsDataURL(file)
+	}
+
   render() {
     return (
           <section className="forms">
@@ -58,7 +80,13 @@ class Form extends Component {
                 <div id="personal-data" className="boxfield hidden">
                   <div className="input-form photo">
                     <label for="photo">Introduce tu foto</label>
-                    <input id="files" type="file" name="files[]"  accept="image/*" className="picture"/>
+										<input className="picture"
+											type="file"
+											onChange={(e)=>this.handleImageChange(e)} />
+										<button className="save-personal"
+											type="submit"
+											onClick={(e)=>this.handleSubmit(e)}>Upload Image</button>
+										
                   </div>
                   <div className="input-form">
                     <label for="name">Nombre*</label>
