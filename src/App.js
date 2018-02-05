@@ -42,7 +42,7 @@ updateState(prop, value){
 							jobCharge={this.state.jobCharte}
 							jobBusiness={this.state.jobBusiness}
 							other={this.state.other}/>
-
+						
 
 					</main>
 					<Footer />
