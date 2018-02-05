@@ -42,7 +42,7 @@ class Avatar extends Component {
 		if (imagePreviewUrl) {
 			$imagePreview = (<img src={imagePreviewUrl} />);
 		} else {
-			$imagePreview = null;
+			$imagePreview = (<img src={background1} />);
 		}
 
 		return (
