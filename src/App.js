@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Preview from './components/Preview';
 import Form from './components/Form';
+import Avatar from './components/Avatar';
 import './scss/main.css';
 
 class App extends Component {
@@ -63,7 +64,9 @@ class App extends Component {
 							linkedin={this.state.linkedin}
 							jobArr={this.state.jobArr}
 							studyArr={this.state.studyArr}
-							other={this.state.other} />
+							other={this.state.other}
+							imagePreviewUrl={this.state.imagePreviewUrl}
+						/>
 
 					</main>
 					<Footer />
