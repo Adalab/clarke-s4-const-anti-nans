@@ -41,14 +41,16 @@ class Avatar extends Component {
 		let $imagePreview = null;
 		if (imagePreviewUrl) {
 			$imagePreview = (<img src={imagePreviewUrl} />);
+		} else {
+			$imagePreview = null;
 		}
 
 		return (
 			<div className="prev-info-personaldates">
-				<form className="input-form" onSubmit={(e)=>this._handleSubmit(e)}>
+				<form className="input-form" onSubmit={(e)=>this.handleSubmit(e)}>
 					<input className="picture"
 						type="file"
-						onChange={(e)=>this._handleImageChange(e)} />
+						onChange={(e)=>this.handleImageChange(e)} />
 				</form>
 				<div className="prev-photo">
 					{$imagePreview}

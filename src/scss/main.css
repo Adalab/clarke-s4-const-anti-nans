@@ -623,6 +623,9 @@ li {
   .prev-list-personal {
     width: 74%; } }
 
+.preImg {
+  display: none; }
+
 * {
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif; }
