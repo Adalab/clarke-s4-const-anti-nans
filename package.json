@@ -1,5 +1,6 @@
 {
-  "name": "teodio",
+	"homepage": "./",
+  "name": "antinan",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
